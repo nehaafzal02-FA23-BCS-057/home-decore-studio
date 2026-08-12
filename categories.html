@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Categories - Home Decor Studio</title>
+<meta name="description" content="Browse interior design categories. Living Room, Bedroom, Kitchen, Bathroom, Office and more by Home Decor Studio Pakistan.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+    *{margin:0; padding:0; box-sizing:border-box;}
+    body{font-family:'Poppins', Arial, sans-serif; line-height:1.8; color:#333; background:#fafafa;}
+    
+    header{background:#8B5A2B; color:white; padding:20px; text-align:center; position:sticky; top:0; z-index:100;}
+    header h2{font-size:28px; margin-bottom:10px;}
+    nav a{color:white; margin:0 15px; text-decoration:none; font-weight:600;}
+    nav a:hover{color:#fbbf24;}
+    
+    .container{max-width:1200px; margin:40px auto; padding:20px;}
+    h1{color:#8B5A2B; margin-bottom:10px; font-size:36px; text-align:center;}
+    .subtitle{text-align:center; margin-bottom:30px; color:#666; font-size:16px;}
+    
+    /* NEW: Filter Buttons */
+    .filter-btns{text-align:center; margin-bottom:40px;}
+    .filter-btn{background:white; border:2px solid #8B5A2B; color:#8B5A2B; padding:10px 20px; margin:5px; border-radius:25px; cursor:pointer; font-weight:600; transition:0.3s;}
+    .filter-btn:hover, .filter-btn.active{background:#8B5A2B; color:white;}
+    
+    .categories-grid{
+        display:grid; 
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+        gap:30px;
+    }
+    
+    .category-card{
+        background:white; 
+        border-radius:10px; 
+        overflow:hidden; 
+        box-shadow:0 4px 10px rgba(0,0,0,0.1);
+        transition:transform 0.3s, box-shadow 0.3s;
+    }
+    .category-card:hover{
+        transform:translateY(-8px);
+        box-shadow:0 8px 20px rgba(0,0,0,0.15);
+    }
+    
+    .category-card img{
+        width:100%; 
+        height:220px; 
+        object-fit:cover;
+    }
+    
+    .category-content{padding:20px;}
+    .category-content h3{color:#8B5A2B; margin-bottom:10px; font-size:22px; font-weight:700;}
+    .category-content p{color:#666; margin-bottom:15px; font-size:14px;}
+    
+    .btn{background:#8B5A2B; color:white; padding:10px 20px; text-decoration:none; border-radius:5px; display:inline-block; font-weight:600; transition:background 0.3s;}
+    .btn:hover{background:#6b4423;}
+
+    /* NEW: CTA Section */
+    .cta-section{background:#8B5A2B; color:white; text-align:center; padding:50px 20px; margin-top:60px; border-radius:10px;}
+    .cta-section h2{font-size:32px; margin-bottom:15px;}
+    .cta-btn{background:#fbbf24; color:#8B5A2B; padding:12px 30px; text-decoration:none; border-radius:5px; font-weight:700; display:inline-block; margin-top:15px;}
+    .cta-btn:hover{background:white;}
+
+    /* NEW: WhatsApp Button */
+    .whatsapp-float{position:fixed; bottom:20px; right:20px; background:#25D366; color:white; width:60px; height:60px; border-radius:50%; text-align:center; font-size:30px; line-height:60px; z-index:999; text-decoration:none; box-shadow:0 4px 10px rgba(0,0,0,0.3);}
+    
+    footer{background:#8B5A2B; color:white; text-align:center; padding:20px; margin-top:50px;}
+</style>
+</head>
+<body>
+
+<header>
+    <h2>Home Decor Studio</h2>
+    <nav>
+    <a href="index.html">Home</a>
+    <a href="about-us.html">About Us</a>
+    <a href="categories.html">Categories</a>
+    <a href="blog.html">Blog</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact-us.html">Contact</a>
+</nav>
+</header>
+
+<div class="container">
+    <h1>Our Design Categories</h1>
+    <p class="subtitle">Explore our interior design services for every room in your home</p>
+    
+    <!-- NEW: Filter Buttons -->
+    <div class="filter-btns">
+        <button class="filter-btn active">All</button>
+        <button class="filter-btn">Living</button>
+        <button class="filter-btn">Bedroom</button>
+        <button class="filter-btn">Kitchen</button>
+        <button class="filter-btn">Office</button>
+    </div>
+    
+    <div class="categories-grid">
+        
+        <div class="category-card">
+            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600" alt="Living Room Design">
+            <div class="category-content">
+                <h3>Living Room</h3>
+                <p>Make your living room stylish and comfortable. Modern sofas, TV walls, and lighting solutions.</p>
+                <a href="contact-us.html" class="btn">View Projects</a>
+            </div>
+        </div>
+
+        <div class="category-card">
+            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600" alt="Bedroom Design">
+            <div class="category-content">
+                <h3>Bedroom</h3>
+                <p>Create your peaceful retreat. Wardrobe design, bed setup, and cozy bedroom interiors.</p>
+                <a href="contact-us.html" class="btn">View Projects</a>
+            </div>
+        </div>
+
+        <div class="category-card">
+            <img src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=600" alt="Kitchen Design">
+            <div class="category-content">
+                <h3>Kitchen</h3>
+                <p>Modern and functional kitchen designs. Modular kitchens, storage, and beautiful tiles.</p>
+                <a href="contact-us.html" class="btn">View Projects</a>
+            </div>
+        </div>
+
+        <div class="category-card">
+            <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=600" alt="Bathroom Design">
+            <div class="category-content">
+                <h3>Bathroom</h3>
+                <p>Luxury bathroom designs with smart storage and modern fixtures for your home.</p>
+                <a href="contact-us.html" class="btn">View Projects</a>
+            </div>
+        </div>
+
+        <div class="category-card">
+            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=600" alt="Office Design">
+            <div class="category-content">
+                <h3>Office</h3>
+                <p>Professional office and study room designs to boost productivity and comfort.</p>
+                <a href="contact-us.html" class="btn">View Projects</a>
+            </div>
+        </div>
+
+        <div class="category-card">
+            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=600" alt="Full House Design">
+            <div class="category-content">
+                <h3>Full House</h3>
+                <p>Complete home interior solutions from 2 bed to 5 bed houses. Turnkey projects.</p>
+                <a href="contact-us.html" class="btn">View Projects</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- NEW: CTA Section -->
+    <div class="cta-section">
+        <h2>Ready to Transform Your Home?</h2>
+        <p>Get a free consultation with our interior design experts today!</p>
+        <a href="contact-us.html" class="cta-btn">Get Free Quote</a>
+    </div>
+
+</div>
+
+<!-- NEW: WhatsApp Float Button -->
+<a href="https://wa.me/923001234567" class="whatsapp-float" target="_blank">💬</a>
+
+<footer>
+
+    <p>© 2026 Home Decor Studio. All Rights Reserved.</p>
+
+    <p>
+        <a href="privacy-policy.html">Privacy Policy</a> |
+        <a href="terms-conditions.html">Terms & Conditions</a> |
+        <a href="cookie-policy.html">Cookie Policy</a> |
+        <a href="disclaimer.html">Disclaimer</a> |
+        <a href="faq.html">FAQ</a> |
+        <a href="contact-us.html">Contact</a>
+    </p>
+
+</footer>
+
+</body>
+</html>
