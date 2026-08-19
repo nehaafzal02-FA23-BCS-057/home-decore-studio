@@ -27,3 +27,4 @@ The purpose of this project is to create a user-friendly home decor website that
 ## Live Website
 
 https://nehaafzal02-fa23-BCS-057.github.io/home-decore-studio/
+This is my GitHub collaboration practice
