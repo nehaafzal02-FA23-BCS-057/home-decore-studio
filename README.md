@@ -28,3 +28,4 @@ The purpose of this project is to create a user-friendly home decor website that
 
 https://nehaafzal02-fa23-BCS-057.github.io/home-decore-studio/
 This is my GitHub collaboration practice
+This line was added on GitHub to test git pull command
