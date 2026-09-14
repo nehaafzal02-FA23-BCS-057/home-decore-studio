@@ -77,7 +77,6 @@ https://home-decore-studio.vercel.app/
 
 ### GitHub Pages
 https://nehaafzal02-fa23-BCS-057.github.io/home-decore-studio/
-
 ## Repository
 
 https://github.com/nehaafzal02-FA23-BCS-057/home-decore-studio
@@ -87,3 +86,8 @@ https://github.com/nehaafzal02-FA23-BCS-057/home-decore-studio
 **Neha Afzal**
 
 Home Decor Studio — Web Development Internship Project
+This is my GitHub collaboration practice
+This line was added on GitHub to test git pull command
+Updated from VS Code on 19 Aug 2026
+This line was added on GitHub to test git pull 
+Test CI/CD - 24 Aug 2026
