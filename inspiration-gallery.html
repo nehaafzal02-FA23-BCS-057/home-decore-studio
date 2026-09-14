@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Inspiration Gallery - Home Decor Studio</title>
+
+<meta name="description" content="Explore interior design inspiration by room, property type and design style at Home Decor Studio.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Poppins,Arial,sans-serif;
+    color:#333;
+    background:#fffaf5;
+    line-height:1.6;
+}
+
+header{
+    background:#8b5a2b;
+    padding:18px 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:100;
+    box-shadow:0 3px 15px #00000025;
+}
+
+.logo{
+    font-size:23px;
+    font-weight:700;
+    color:white;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:18px;
+    font-size:13px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#fbbf24;
+}
+
+.hero{
+    background:linear-gradient(135deg,#8b5a2b,#b77b45);
+    color:white;
+    text-align:center;
+    padding:75px 20px;
+}
+
+.hero h1{
+    font-size:44px;
+    margin-bottom:12px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:17px;
+}
+
+/* CONTAINER */
+
+.container{
+    width:86%;
+    max-width:1200px;
+    margin:55px auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.section-title h2{
+    font-size:32px;
+    color:#5c3b22;
+}
+
+.section-title p{
+    color:#777;
+}
+
+/* FILTERS */
+
+.filters{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:35px;
+}
+
+.filter-btn{
+    border:1px solid #8b5a2b;
+    background:white;
+    color:#8b5a2b;
+    padding:9px 18px;
+    border-radius:25px;
+    cursor:pointer;
+    font-family:inherit;
+    font-size:13px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active{
+    background:#8b5a2b;
+    color:white;
+}
+
+/* GALLERY */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 8px 25px #00000012;
+    transition:0.3s ease;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 14px 30px #00000018;
+}
+
+.visual{
+    height:240px;
+    overflow:hidden;
+    background:#eee;
+}
+
+.visual img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:0.5s ease;
+}
+
+.card:hover .visual img{
+    transform:scale(1.05);
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    color:#6b4425;
+    margin-bottom:8px;
+    font-size:20px;
+}
+
+.card-content p{
+    font-size:14px;
+    color:#666;
+}
+
+/* CTA */
+
+.cta{
+    text-align:center;
+    background:#f5e6d3;
+    padding:55px 20px;
+    border-radius:18px;
+    margin-top:55px;
+}
+
+.cta h2{
+    color:#5c3b22;
+    margin-bottom:10px;
+}
+
+.cta p{
+    margin-bottom:20px;
+    color:#666;
+}
+
+.btn{
+    display:inline-block;
+    background:#8b5a2b;
+    color:white;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:8px;
+    font-weight:600;
+    transition:0.3s;
+    margin:5px;
+}
+
+.btn:hover{
+    background:#6f451f;
+    transform:translateY(-2px);
+}
+
+/* FOOTER */
+
+footer{
+    margin-top:60px;
+    background:#3f2a1b;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+footer p{
+    font-size:14px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+    header{
+        padding:18px 4%;
+    }
+
+    nav a{
+        margin-left:12px;
+    }
+
+    .gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:800px){
+
+    nav{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+}
+
+@media(max-width:520px){
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .container{
+        width:90%;
+    }
+
+    .hero{
+        padding:60px 18px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .visual{
+        height:230px;
+    }
+
+    .filter-btn{
+        padding:8px 14px;
+        font-size:12px;
+    }
+
+    .btn{
+        display:block;
+        width:100%;
+        margin:8px 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+Home Decor Studio
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about-us.html">About</a>
+<a href="services.html">Services</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="project-detail.html">Projects</a>
+<a href="packages.html">Packages</a>
+<a href="blog.html">Blog</a>
+<a href="contact-us.html">Contact</a>
+<a href="get-a-quote.html">Get a Quote</a>
+<a href="book-consultation.html">Book Consultation</a>
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<h1>Inspiration Gallery</h1>
+
+<p>
+Explore beautiful interior ideas, modern spaces and creative design inspiration for your dream home.
+</p>
+
+</section>
+
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Design Inspiration</h2>
+
+<p>
+Discover ideas for every room and every design style.
+</p>
+
+</div>
+
+
+<!-- FILTERS -->
+
+<div class="filters">
+
+<button class="filter-btn active" onclick="filterGallery('all', this)">
+All
+</button>
+
+<button class="filter-btn" onclick="filterGallery('living-room', this)">
+Living Room
+</button>
+
+<button class="filter-btn" onclick="filterGallery('bedroom', this)">
+Bedroom
+</button>
+
+<button class="filter-btn" onclick="filterGallery('kitchen', this)">
+Kitchen
+</button>
+
+<button class="filter-btn" onclick="filterGallery('lighting', this)">
+Lighting
+</button>
+
+<button class="filter-btn" onclick="filterGallery('natural', this)">
+Natural
+</button>
+
+</div>
+
+
+<div class="gallery" id="gallery">
+
+
+<!-- MODERN LIVING ROOM -->
+
+<div class="card" data-category="living-room">
+
+<div class="visual">
+
+<img
+src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85"
+alt="Modern Living Room Interior"
+loading="lazy">
+
+</div>
+
+<div class="card-content">
+
+<h3>Modern Living Room</h3>
+
+<p>
+Clean lines, comfortable furniture and elegant neutral tones create a stylish and welcoming modern living room.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- LUXURY BEDROOM -->
+
+<div class="card" data-category="bedroom">
+
+<div class="visual">
+
+<img
+src="https://images.unsplash.com/photo-1617325710236-4a36d2a1b0d3?auto=format&fit=crop&w=1000&q=85"
+alt="Luxury Bedroom Interior"
+loading="lazy">
+
+</div>
+
+<div class="card-content">
+
+<h3>Luxury Bedroom</h3>
+
+<p>
+Premium finishes, elegant lighting and sophisticated furniture create a peaceful and luxurious bedroom retreat.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- CONTEMPORARY KITCHEN -->
+
+<div class="card" data-category="kitchen">
+
+<div class="visual">
+
+<img
+src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf?auto=format&fit=crop&w=1000&q=85"
+alt="Contemporary Kitchen Interior"
+loading="lazy">
+
+</div>
+
+<div class="card-content">
+
+<h3>Contemporary Kitchen</h3>
+
+<p>
+Modern cabinets, clean surfaces and practical layouts create a beautiful and functional contemporary kitchen.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- MINIMALIST SPACE -->
+
+<div class="card" data-category="living-room">
+
+<div class="visual">
+
+<img
+src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85"
+alt="Minimalist Interior Space"
+loading="lazy">
+
+</div>
+
+<div class="card-content">
+
+<h3>Minimalist Space</h3>
+
+<p>
+A clean and uncluttered interior focused on simplicity, comfort, natural light and functional design.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- STATEMENT LIGHTING -->
+
+<div class="card" data-category="lighting">
+
+<div class="visual">
+
+<img
+src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=1000&q=85"
+alt="Statement Lighting Interior"
+loading="lazy">
+
+</div>
+
+<div class="card-content">
+
+<h3>Statement Lighting</h3>
+
+<p>
+Elegant decorative lighting adds character and becomes an attractive feature of the interior.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- NATURAL INTERIORS -->
+
+<div class="card" data-category="natural">
+
+<div class="visual">
+
+<img
+src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=1000&q=85"
+alt="Natural Interior Design"
+loading="lazy">
+
+</div>
+
+<div class="card-content">
+
+<h3>Natural Interiors</h3>
+
+<p>
+Natural wood, indoor plants and warm textures bring freshness, comfort and a calming atmosphere into the space.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="cta">
+
+<h2>Ready to Create Your Dream Space?</h2>
+
+<p>
+Let our designers turn your inspiration into a beautiful interior.
+</p>
+
+<a href="book-consultation.html" class="btn">
+Book Consultation
+</a>
+
+<a href="get-a-quote.html" class="btn">
+Get a Quote
+</a>
+
+</div>
+
+</div>
+
+
+<footer>
+
+<p>
+© 2026 Home Decor Studio. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<script>
+
+function filterGallery(category, button){
+
+    const cards = document.querySelectorAll(".card");
+    const buttons = document.querySelectorAll(".filter-btn");
+
+    buttons.forEach(btn => {
+        btn.classList.remove("active");
+    });
+
+    button.classList.add("active");
+
+    cards.forEach(card => {
+
+        if(category === "all" || card.dataset.category === category){
+
+            card.style.display = "block";
+
+        }else{
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>

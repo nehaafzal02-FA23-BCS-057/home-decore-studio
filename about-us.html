@@ -3,77 +3,688 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us - Home Decor Studio</title>
-<meta name="description" content="Learn about Home Decor Studio. We are top interior designers in Pakistan creating dream homes since 2020.">
+
+<title>About Us - Home Decor Studio Pakistan</title>
+<meta name="description" content="Learn about Home Decor Studio, our mission, vision and approach to creating beautiful residential and commercial interiors across Pakistan.">
+
+<meta property="og:title" content="About Us - Home Decor Studio">
+<meta property="og:description" content="Discover the story, mission and vision behind Home Decor Studio Pakistan.">
+<meta property="og:type" content="website">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-    *{margin:0; padding:0; box-sizing:border-box;}
-    body{font-family:'Poppins', Arial, sans-serif; line-height:1.8; color:#333;}
-    header{background:#8B5A2B; color:white; padding:20px; text-align:center; position:sticky; top:0;}
-    nav a{color:white; margin:0 15px; text-decoration:none; font-weight:bold;}
-    nav a:hover{color:#fbbf24;}
-    .container{max-width:1000px; margin:40px auto; padding:20px;}
-    h1{color:#8B5A2B; margin-bottom:20px; font-size:36px; text-align:center;}
-    h2{color:#8B5A2B; margin-top:30px; margin-bottom:15px;}
-    .about-grid{display:flex; gap:30px; align-items:center; flex-wrap:wrap;}
-    .about-text{flex:1; min-width:300px;}
-    .about-img{flex:1; min-width:300px;}
-    .about-img img{width:100%; border-radius:10px;}
-    ul{margin-left:20px; list-style:none;}
-    ul li{margin-bottom:10px;}
-    .btn{background:#8B5A2B; color:white; padding:12px 30px; text-decoration:none; border-radius:5px; display:inline-block; font-weight:bold; margin-top:20px;}
-    .btn:hover{background:#6b4423;}
-    .cta{background:#f5e6d3; text-align:center; padding:40px 20px; border-radius:10px; margin-top:40px;}
-    footer{background:#333; color:white; text-align:center; padding:20px; margin-top:40px;}
-    footer a{color:#fbbf24; margin:0 10px;}
-    @media(max-width:768px){.about-grid{flex-direction:column;}}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',Arial,sans-serif;
+    line-height:1.8;
+    color:#333;
+    background:#fafafa;
+}
+
+/* HEADER */
+header{
+    background:#8B5A2B;
+    color:white;
+    padding:18px 20px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 12px rgba(0,0,0,0.15);
+}
+
+.header-inner{
+    max-width:1250px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    color:white;
+    text-decoration:none;
+    font-size:25px;
+    font-weight:700;
+    white-space:nowrap;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+    gap:8px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+    padding:8px 10px;
+    border-radius:5px;
+    transition:0.3s;
+}
+
+nav a:hover,
+nav a.active{
+    color:#fbbf24;
+}
+
+/* HERO */
+.hero{
+    background:
+        linear-gradient(rgba(70,40,15,0.70),rgba(70,40,15,0.70)),
+        url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=85")
+        center/cover;
+    min-height:360px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:50px 20px;
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+/* BREADCRUMB */
+.breadcrumb{
+    max-width:1200px;
+    margin:25px auto 0;
+    padding:0 20px;
+    font-size:14px;
+    color:#777;
+}
+
+.breadcrumb a{
+    color:#8B5A2B;
+    text-decoration:none;
+}
+
+/* MAIN */
+.container{
+    max-width:1200px;
+    margin:40px auto;
+    padding:0 20px;
+}
+
+.intro{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:45px;
+    align-items:center;
+    margin-bottom:55px;
+}
+
+.intro-image img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    border-radius:12px;
+    display:block;
+}
+
+.intro-text h2{
+    color:#8B5A2B;
+    font-size:34px;
+    margin-bottom:18px;
+}
+
+.intro-text p{
+    color:#555;
+    margin-bottom:15px;
+}
+
+/* SECTIONS */
+.section{
+    margin-bottom:50px;
+}
+
+.section h2{
+    color:#8B5A2B;
+    text-align:center;
+    font-size:34px;
+    margin-bottom:15px;
+}
+
+.section-intro{
+    max-width:750px;
+    margin:0 auto 30px;
+    text-align:center;
+    color:#666;
+}
+
+/* MISSION / VISION */
+.info-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.info-card{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.08);
+}
+
+.info-card h3{
+    color:#8B5A2B;
+    font-size:24px;
+    margin-bottom:12px;
+}
+
+.info-card p{
+    color:#666;
+}
+
+/* WHY CHOOSE US */
+.features{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:18px;
+}
+
+.feature{
+    background:white;
+    padding:22px 15px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.feature:hover{
+    transform:translateY(-5px);
+}
+
+.feature-icon{
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.feature h3{
+    color:#8B5A2B;
+    font-size:17px;
+    margin-bottom:7px;
+}
+
+.feature p{
+    color:#666;
+    font-size:13px;
+}
+
+/* PROCESS */
+.process{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.process-card{
+    background:#f5e6d3;
+    padding:25px 18px;
+    text-align:center;
+    border-radius:10px;
+}
+
+.process-number{
+    width:45px;
+    height:45px;
+    background:#8B5A2B;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 12px;
+    font-weight:700;
+}
+
+.process-card h3{
+    color:#8B5A2B;
+    font-size:18px;
+    margin-bottom:7px;
+}
+
+.process-card p{
+    font-size:13px;
+    color:#666;
+}
+
+/* CTA */
+.cta{
+    background:#8B5A2B;
+    color:white;
+    text-align:center;
+    padding:55px 25px;
+    border-radius:12px;
+    margin-top:60px;
+}
+
+.cta h2{
+    color:white;
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.cta p{
+    margin-bottom:15px;
+}
+
+.btn{
+    display:inline-block;
+    background:#fbbf24;
+    color:#8B5A2B;
+    padding:12px 28px;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:700;
+    margin-top:10px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:white;
+}
+
+/* WHATSAPP */
+.whatsapp-float{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:58px;
+    height:58px;
+    background:#25D366;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    text-decoration:none;
+    z-index:999;
+    box-shadow:0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* FOOTER */
+footer{
+    background:#8B5A2B;
+    color:white;
+    text-align:center;
+    padding:28px 20px;
+    margin-top:55px;
+}
+
+footer p{
+    margin:6px 0;
+    font-size:14px;
+}
+
+footer a{
+    color:white;
+    text-decoration:none;
+}
+
+footer a:hover{
+    color:#fbbf24;
+}
+
+/* RESPONSIVE */
+@media(max-width:1050px){
+
+    .header-inner{
+        flex-direction:column;
+    }
+
+    nav{
+        justify-content:center;
+    }
+
+    .features{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .process{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:750px){
+
+    .hero{
+        min-height:300px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .intro{
+        grid-template-columns:1fr;
+        gap:25px;
+    }
+
+    .intro-image img{
+        height:300px;
+    }
+
+    .intro-text h2{
+        font-size:28px;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .features{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .process{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:500px){
+
+    header{
+        padding:15px 10px;
+    }
+
+    .logo{
+        font-size:21px;
+    }
+
+    nav{
+        gap:2px;
+    }
+
+    nav a{
+        font-size:11px;
+        padding:5px 6px;
+    }
+
+    .hero h1{
+        font-size:29px;
+    }
+
+    .container{
+        padding:0 15px;
+    }
+
+    .section h2{
+        font-size:27px;
+    }
+
+    .features,
+    .process{
+        grid-template-columns:1fr;
+    }
+
+    .cta h2{
+        font-size:26px;
+    }
+
+    .whatsapp-float{
+        width:52px;
+        height:52px;
+        font-size:24px;
+        right:15px;
+        bottom:15px;
+    }
+}
 </style>
 </head>
+
 <body>
 
 <header>
-    <h2>Home Decor Studio</h2>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about-us.html">About Us</a>
-        <a href="categories.html">Categories</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact-us.html">Contact</a>
-    </nav>
+    <div class="header-inner">
+
+        <a href="index.html" class="logo">Home Decor Studio</a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about-us.html" class="active">About</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="project-details.html">Projects</a>
+            <a href="packages.html">Packages</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact-us.html">Contact</a>
+            <a href="get-a-quote.html">Get a Quote</a>
+            <a href="book-consultation.html">Book Consultation</a>
+        </nav>
+
+    </div>
 </header>
 
-<div class="container">
-    <h1>About Home Decor Studio</h1>
-    
-    <div class="about-grid">
-        <div class="about-text">
-            <p>Welcome to <b>Home Decor Studio</b> - Your trusted partner for creating beautiful and modern interior designs across Pakistan. We started our journey in 2020 with one simple goal: to turn every house into a dream home.</p>
-        </div>
-        <div class="about-img">
-            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600" alt="Interior Design Team">
-        </div>
+<section class="hero">
+    <div class="hero-content">
+        <h1>About Home Decor Studio</h1>
+        <p>
+            Creating beautiful, functional and personalized interiors
+            for homes and businesses across Pakistan.
+        </p>
     </div>
+</section>
 
-    <h2>Our Mission</h2>
-    <p>We believe your home should tell your story. Our expert team of designers works closely with you to create spaces that are stylish, comfortable, and 100% you. From concept to completion, we handle everything.</p>
-    
-    <h2>Why Choose Us?</h2>
-    <ul>
-        <li>✅ <b>500+ Happy Clients</b> across Pakistan</li>
-        <li>✅ <b>Affordable to Luxury</b> designs for every budget</li>
-        <li>✅ <b>On-Time Delivery</b> guaranteed</li>
-        <li>✅ <b>Free Consultation</b> for your first project</li>
-        <li>✅ <b>3D Design Views</b> before we start work</li>
-    </ul>
-    
-    <h2>Our Vision</h2>
-    <p>To become Pakistan's #1 interior design brand by making beautiful homes accessible to everyone.</p>
-    
-    <div class="cta">
-        <h2>Let's build your dream home together!</h2>
-        <p>Get your free consultation today</p>
-        <a href="contact-us.html" class="btn">Contact Us Now</a>
-    </div>
+<div class="breadcrumb">
+    <a href="index.html">Home</a> / About Us
 </div>
+
+<main class="container">
+
+    <!-- INTRO -->
+    <section class="intro">
+
+        <div class="intro-text">
+            <h2>Who We Are</h2>
+
+            <p>
+                Welcome to <strong>Home Decor Studio</strong> — your trusted
+                partner for creating beautiful and modern interior spaces
+                across Pakistan.
+            </p>
+
+            <p>
+                We started our journey in 2020 with one simple goal:
+                to turn ordinary spaces into inspiring environments that
+                reflect the personality, lifestyle and needs of our clients.
+            </p>
+
+            <p>
+                From individual rooms to complete residential and commercial
+                interiors, we combine creativity, functionality and thoughtful
+                planning to deliver spaces that feel both beautiful and practical.
+            </p>
+        </div>
+
+        <div class="intro-image">
+            <img
+                src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1000&q=85"
+                alt="Beautiful interior designed living space"
+                loading="lazy"
+            >
+        </div>
+
+    </section>
+
+    <!-- MISSION & VISION -->
+    <section class="section">
+
+        <h2>Our Mission & Vision</h2>
+
+        <p class="section-intro">
+            Our goal is to make thoughtful interior design accessible,
+            practical and enjoyable for every client.
+        </p>
+
+        <div class="info-grid">
+
+            <div class="info-card">
+                <h3>Our Mission</h3>
+                <p>
+                    We believe your space should tell your story. Our designers
+                    work closely with clients to understand their requirements
+                    and create interiors that are stylish, comfortable and
+                    personalized. From initial concept to completion, we focus
+                    on quality and attention to detail.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>Our Vision</h3>
+                <p>
+                    Our vision is to become a trusted interior design brand
+                    in Pakistan by delivering innovative, beautiful and
+                    functional spaces while maintaining transparency,
+                    professionalism and customer satisfaction.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="section">
+
+        <h2>Why Choose Home Decor Studio?</h2>
+
+        <p class="section-intro">
+            We combine creative design with practical solutions to make
+            every project a smooth and rewarding experience.
+        </p>
+
+        <div class="features">
+
+            <div class="feature">
+                <div class="feature-icon">🏠</div>
+                <h3>500+ Clients</h3>
+                <p>Trusted by clients for residential and commercial projects.</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">💰</div>
+                <h3>Flexible Budgets</h3>
+                <p>Design solutions ranging from affordable to luxury.</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">⏱️</div>
+                <h3>On-Time Delivery</h3>
+                <p>Well-planned projects with clear timelines.</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">🤝</div>
+                <h3>Free Consultation</h3>
+                <p>Discuss your ideas with our design team.</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">🎨</div>
+                <h3>3D Visualization</h3>
+                <p>Visualize design concepts before execution.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- OUR PROCESS -->
+    <section class="section">
+
+        <h2>Our Design Approach</h2>
+
+        <p class="section-intro">
+            Every project follows a structured approach designed to keep
+            the process clear, creative and client-focused.
+        </p>
+
+        <div class="process">
+
+            <div class="process-card">
+                <div class="process-number">1</div>
+                <h3>Consultation</h3>
+                <p>We understand your requirements, preferences and budget.</p>
+            </div>
+
+            <div class="process-card">
+                <div class="process-number">2</div>
+                <h3>Concept</h3>
+                <p>Our team develops a design direction for your space.</p>
+            </div>
+
+            <div class="process-card">
+                <div class="process-number">3</div>
+                <h3>Visualization</h3>
+                <p>Design ideas are presented through detailed visuals.</p>
+            </div>
+
+            <div class="process-card">
+                <div class="process-number">4</div>
+                <h3>Execution</h3>
+                <p>The approved design is transformed into your finished space.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+
+        <h2>Let's Build Your Dream Space Together</h2>
+
+        <p>
+            Have an interior design idea? Talk to our team and take
+            the first step toward transforming your space.
+        </p>
+
+        <a href="book-consultation.html" class="btn">
+            Book a Consultation
+        </a>
+
+        <a href="get-a-quote.html" class="btn">
+            Get a Quote
+        </a>
+
+    </section>
+
+</main>
+
+<a
+    href="https://wa.me/923001234567"
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener"
+    aria-label="Contact Home Decor Studio on WhatsApp"
+>💬</a>
 
 <footer>
 

@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Before & After - Home Decor Studio</title>
+
+<meta name="description" content="Explore beautiful interior transformations by Home Decor Studio and see how ordinary spaces become stylish and functional interiors.">
+
+<meta property="og:title" content="Before & After - Home Decor Studio">
+<meta property="og:description" content="Discover beautiful interior design transformations from before to after.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Poppins,Arial,sans-serif;
+    background:#fffaf5;
+    color:#3e2b1f;
+    line-height:1.7;
+}
+
+a{
+    text-decoration:none;
+}
+
+/* HEADER */
+
+header{
+    background:#8b5a2b;
+    padding:18px 5%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 15px #00000025;
+}
+
+.navbar{
+    max-width:1250px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:white;
+    font-size:23px;
+    font-weight:700;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+}
+
+nav a{
+    color:white;
+    margin-left:17px;
+    font-size:13px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover,
+nav a.active{
+    color:#fbbf24;
+}
+
+/* HERO */
+
+.hero{
+    background:
+    linear-gradient(#3e2b1fb8,#3e2b1fb8),
+    url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=85");
+
+    background-size:cover;
+    background-position:center;
+    min-height:430px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+    padding:50px 20px;
+}
+
+.hero-content{
+    max-width:800px;
+    color:white;
+}
+
+.hero h1{
+    font-size:46px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:17px;
+}
+
+/* INTRO */
+
+.intro{
+    max-width:900px;
+    margin:65px auto 40px;
+    padding:0 20px;
+    text-align:center;
+}
+
+.intro h2{
+    color:#8b5a2b;
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.intro p{
+    color:#66554a;
+}
+
+/* TRANSFORMATIONS */
+
+.transformations{
+    max-width:1150px;
+    margin:35px auto 80px;
+    padding:0 20px;
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+
+.transformation{
+    background:white;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 8px 25px #00000012;
+    transition:0.3s ease;
+}
+
+.transformation:hover{
+    transform:translateY(-6px);
+    box-shadow:0 14px 30px #00000018;
+}
+
+.images{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+}
+
+.image-box{
+    position:relative;
+    overflow:hidden;
+}
+
+.image-box img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    display:block;
+    transition:0.5s;
+}
+
+.transformation:hover .image-box img{
+    transform:scale(1.04);
+}
+
+.label{
+    position:absolute;
+    top:12px;
+    left:12px;
+
+    background:#8b5a2b;
+    color:white;
+
+    padding:5px 12px;
+    border-radius:20px;
+
+    font-size:11px;
+    font-weight:600;
+    z-index:2;
+}
+
+.after .label{
+    background:#d39a42;
+}
+
+.details{
+    padding:22px;
+}
+
+.details h3{
+    color:#8b5a2b;
+    font-size:21px;
+    margin-bottom:8px;
+}
+
+.details p{
+    color:#66554a;
+    font-size:14px;
+}
+
+/* CTA */
+
+.cta{
+    background:#f5e6d3;
+    text-align:center;
+    padding:65px 20px;
+}
+
+.cta h2{
+    color:#8b5a2b;
+    font-size:30px;
+    margin-bottom:12px;
+}
+
+.cta p{
+    color:#5c493b;
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+    background:#8b5a2b;
+    color:white;
+    padding:12px 28px;
+    border-radius:8px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#fbbf24;
+    color:#3e2b1f;
+}
+
+/* FOOTER */
+
+footer{
+    background:#3e2b1f;
+    color:white;
+    text-align:center;
+    padding:28px 20px;
+}
+
+footer p{
+    font-size:14px;
+    opacity:0.85;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1050px){
+
+    nav a{
+        margin-left:12px;
+        font-size:12px;
+    }
+
+    .transformations{
+        grid-template-columns:1fr;
+        max-width:850px;
+    }
+}
+
+@media(max-width:800px){
+
+    nav{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .hero{
+        min-height:360px;
+    }
+}
+
+@media(max-width:600px){
+
+    .navbar{
+        justify-content:center;
+    }
+
+    .hero{
+        padding:55px 18px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .intro{
+        margin-top:50px;
+    }
+
+    .intro h2{
+        font-size:26px;
+    }
+
+    .transformations{
+        padding:0 15px;
+    }
+
+    .images{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .image-box img{
+        height:190px;
+    }
+
+    .details{
+        padding:18px;
+    }
+
+    .cta h2{
+        font-size:26px;
+    }
+
+    .btn{
+        width:100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="navbar">
+
+<a href="index.html" class="logo">
+Home Decor Studio
+</a>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about-us.html">About</a>
+<a href="services.html">Services</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="project-detail.html">Projects</a>
+<a href="packages.html">Packages</a>
+<a href="blog.html">Blog</a>
+<a href="contact-us.html">Contact</a>
+<a href="get-a-quote.html">Get a Quote</a>
+<a href="book-consultation.html">Book Consultation</a>
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Before & After</h1>
+
+<p>
+See how thoughtful interior design transforms ordinary spaces
+into beautiful, comfortable and functional interiors.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="intro">
+
+<h2>Real Transformations, Beautiful Results</h2>
+
+<p>
+Every space has potential. Our designers combine creativity,
+functionality and modern design principles to create interiors
+that are stylish, comfortable and practical.
+</p>
+
+</section>
+
+
+<!-- TRANSFORMATIONS -->
+
+<section class="transformations">
+
+
+<!-- LIVING ROOM -->
+
+<div class="transformation">
+
+<div class="images">
+
+<div class="image-box">
+
+<span class="label">BEFORE</span>
+
+<img
+src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=85"
+alt="Living room before interior transformation"
+loading="lazy">
+
+</div>
+
+
+<div class="image-box after">
+
+<span class="label">AFTER</span>
+
+<img
+src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=85"
+alt="Modern living room after interior transformation"
+loading="lazy">
+
+</div>
+
+</div>
+
+<div class="details">
+
+<h3>Modern Living Room</h3>
+
+<p>
+A dated living area transformed into a warm modern space with
+comfortable furniture, balanced lighting and elegant neutral tones.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- BEDROOM -->
+
+<div class="transformation">
+
+<div class="images">
+
+<div class="image-box">
+
+<span class="label">BEFORE</span>
+
+<img
+src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=800&q=85"
+alt="Bedroom before interior transformation"
+loading="lazy">
+
+</div>
+
+
+<div class="image-box after">
+
+<span class="label">AFTER</span>
+
+<img
+src="https://images.unsplash.com/photo-1617325710236-4a36d2a1b0d3?auto=format&fit=crop&w=800&q=85"
+alt="Luxury bedroom after interior transformation"
+loading="lazy">
+
+</div>
+
+</div>
+
+<div class="details">
+
+<h3>Luxury Bedroom</h3>
+
+<p>
+A simple bedroom redesigned with refined furniture, soft textures,
+elegant lighting and a calm luxury-inspired atmosphere.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- KITCHEN -->
+
+<div class="transformation">
+
+<div class="images">
+
+<div class="image-box">
+
+<span class="label">BEFORE</span>
+
+<img
+src="https://images.unsplash.com/photo-1556912173-46c336c7fd55?auto=format&fit=crop&w=800&q=85"
+alt="Kitchen before interior transformation"
+loading="lazy">
+
+</div>
+
+
+<div class="image-box after">
+
+<span class="label">AFTER</span>
+
+<img
+src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf?auto=format&fit=crop&w=800&q=85"
+alt="Contemporary kitchen after interior transformation"
+loading="lazy">
+
+</div>
+
+</div>
+
+<div class="details">
+
+<h3>Contemporary Kitchen</h3>
+
+<p>
+An ordinary kitchen transformed with clean cabinets, organized
+storage, practical surfaces and a modern functional layout.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- DINING -->
+
+<div class="transformation">
+
+<div class="images">
+
+<div class="image-box">
+
+<span class="label">BEFORE</span>
+
+<img
+src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=85"
+alt="Dining area before interior transformation"
+loading="lazy">
+
+</div>
+
+
+<div class="image-box after">
+
+<span class="label">AFTER</span>
+
+<img
+src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=85"
+alt="Elegant dining area after interior transformation"
+loading="lazy">
+
+</div>
+
+</div>
+
+<div class="details">
+
+<h3>Elegant Dining Area</h3>
+
+<p>
+A plain dining area enhanced with sophisticated furniture,
+warm lighting and a welcoming modern atmosphere.
+</p>
+
+</div>
+
+</div>
+
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<h2>Ready to Transform Your Space?</h2>
+
+<p>
+Let our design team turn your ideas into a beautiful reality.
+</p>
+
+<a href="book-consultation.html" class="btn">
+Book a Consultation
+</a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Home Decor Studio. All Rights Reserved.
+</p>
+
+</footer>
+
+</body>
+</html>

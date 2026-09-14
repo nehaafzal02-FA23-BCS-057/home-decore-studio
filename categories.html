@@ -3,169 +3,588 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Categories - Home Decor Studio</title>
-<meta name="description" content="Browse interior design categories. Living Room, Bedroom, Kitchen, Bathroom, Office and more by Home Decor Studio Pakistan.">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<title>Design Categories - Home Decor Studio Pakistan</title>
+<meta name="description" content="Explore interior design categories including living rooms, bedrooms, kitchens, bathrooms, offices and complete home interiors by Home Decor Studio Pakistan.">
+
+<meta property="og:title" content="Design Categories - Home Decor Studio">
+<meta property="og:description" content="Explore our interior design categories and find the perfect style for your space.">
+<meta property="og:type" content="website">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-    *{margin:0; padding:0; box-sizing:border-box;}
-    body{font-family:'Poppins', Arial, sans-serif; line-height:1.8; color:#333; background:#fafafa;}
-    
-    header{background:#8B5A2B; color:white; padding:20px; text-align:center; position:sticky; top:0; z-index:100;}
-    header h2{font-size:28px; margin-bottom:10px;}
-    nav a{color:white; margin:0 15px; text-decoration:none; font-weight:600;}
-    nav a:hover{color:#fbbf24;}
-    
-    .container{max-width:1200px; margin:40px auto; padding:20px;}
-    h1{color:#8B5A2B; margin-bottom:10px; font-size:36px; text-align:center;}
-    .subtitle{text-align:center; margin-bottom:30px; color:#666; font-size:16px;}
-    
-    /* NEW: Filter Buttons */
-    .filter-btns{text-align:center; margin-bottom:40px;}
-    .filter-btn{background:white; border:2px solid #8B5A2B; color:#8B5A2B; padding:10px 20px; margin:5px; border-radius:25px; cursor:pointer; font-weight:600; transition:0.3s;}
-    .filter-btn:hover, .filter-btn.active{background:#8B5A2B; color:white;}
-    
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',Arial,sans-serif;
+    line-height:1.7;
+    color:#333;
+    background:#fafafa;
+}
+
+/* HEADER */
+header{
+    background:#8B5A2B;
+    color:white;
+    padding:18px 20px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 12px rgba(0,0,0,0.15);
+}
+
+.header-inner{
+    max-width:1250px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    color:white;
+    text-decoration:none;
+    font-size:25px;
+    font-weight:700;
+    white-space:nowrap;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+    gap:8px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+    padding:8px 10px;
+    border-radius:5px;
+    transition:0.3s;
+}
+
+nav a:hover,
+nav a.active{
+    color:#fbbf24;
+}
+
+/* HERO */
+.hero{
+    background:
+        linear-gradient(rgba(70,40,15,0.72),rgba(70,40,15,0.72)),
+        url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=85")
+        center/cover;
+    min-height:360px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:50px 20px;
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:700px;
+    margin:auto;
+}
+
+/* BREADCRUMB */
+.breadcrumb{
+    max-width:1200px;
+    margin:25px auto 0;
+    padding:0 20px;
+    font-size:14px;
+    color:#777;
+}
+
+.breadcrumb a{
+    color:#8B5A2B;
+    text-decoration:none;
+}
+
+/* MAIN */
+.container{
+    max-width:1200px;
+    margin:35px auto;
+    padding:0 20px;
+}
+
+.section-heading{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.section-heading h2{
+    color:#8B5A2B;
+    font-size:36px;
+    margin-bottom:10px;
+}
+
+.section-heading p{
+    color:#666;
+    max-width:700px;
+    margin:auto;
+}
+
+/* FILTERS */
+.filter-btns{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:40px;
+}
+
+.filter-btn{
+    background:white;
+    border:2px solid #8B5A2B;
+    color:#8B5A2B;
+    padding:10px 22px;
+    border-radius:25px;
+    cursor:pointer;
+    font-family:inherit;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active{
+    background:#8B5A2B;
+    color:white;
+}
+
+/* CATEGORY GRID */
+.categories-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.category-card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 14px rgba(0,0,0,0.10);
+    transition:0.3s;
+}
+
+.category-card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.category-card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    display:block;
+}
+
+.category-content{
+    padding:22px;
+}
+
+.category-content h3{
+    color:#8B5A2B;
+    font-size:23px;
+    margin-bottom:9px;
+}
+
+.category-content p{
+    color:#666;
+    font-size:14px;
+    margin-bottom:18px;
+}
+
+.btn{
+    display:inline-block;
+    background:#8B5A2B;
+    color:white;
+    padding:10px 20px;
+    border-radius:5px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#6b4423;
+}
+
+/* CTA */
+.cta-section{
+    background:#8B5A2B;
+    color:white;
+    text-align:center;
+    padding:55px 25px;
+    margin:65px 0 20px;
+    border-radius:12px;
+}
+
+.cta-section h2{
+    font-size:32px;
+    margin-bottom:12px;
+}
+
+.cta-section p{
+    margin-bottom:10px;
+}
+
+.cta-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:20px;
+}
+
+.cta-btn{
+    background:#fbbf24;
+    color:#8B5A2B;
+    padding:12px 28px;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:700;
+    transition:0.3s;
+}
+
+.cta-btn:hover{
+    background:white;
+}
+
+.cta-btn.secondary{
+    background:white;
+}
+
+.cta-btn.secondary:hover{
+    background:#fbbf24;
+}
+
+/* WHATSAPP */
+.whatsapp-float{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:58px;
+    height:58px;
+    background:#25D366;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    text-decoration:none;
+    z-index:999;
+    box-shadow:0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* FOOTER */
+footer{
+    background:#8B5A2B;
+    color:white;
+    text-align:center;
+    padding:28px 20px;
+    margin-top:50px;
+}
+
+footer p{
+    margin:6px 0;
+    font-size:14px;
+}
+
+footer a{
+    color:white;
+    text-decoration:none;
+}
+
+footer a:hover{
+    color:#fbbf24;
+}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+    .header-inner{
+        flex-direction:column;
+    }
+
+    nav{
+        justify-content:center;
+    }
+
     .categories-grid{
-        display:grid; 
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-        gap:30px;
+        grid-template-columns:repeat(2,1fr);
     }
-    
-    .category-card{
-        background:white; 
-        border-radius:10px; 
-        overflow:hidden; 
-        box-shadow:0 4px 10px rgba(0,0,0,0.1);
-        transition:transform 0.3s, box-shadow 0.3s;
+
+    .hero h1{
+        font-size:40px;
     }
-    .category-card:hover{
-        transform:translateY(-8px);
-        box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+@media(max-width:650px){
+    header{
+        padding:15px 12px;
     }
-    
+
+    .logo{
+        font-size:22px;
+    }
+
+    nav{
+        gap:3px;
+    }
+
+    nav a{
+        font-size:12px;
+        padding:6px 7px;
+    }
+
+    .hero{
+        min-height:300px;
+    }
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .section-heading h2{
+        font-size:29px;
+    }
+
+    .categories-grid{
+        grid-template-columns:1fr;
+    }
+
     .category-card img{
-        width:100%; 
-        height:220px; 
-        object-fit:cover;
+        height:220px;
     }
-    
-    .category-content{padding:20px;}
-    .category-content h3{color:#8B5A2B; margin-bottom:10px; font-size:22px; font-weight:700;}
-    .category-content p{color:#666; margin-bottom:15px; font-size:14px;}
-    
-    .btn{background:#8B5A2B; color:white; padding:10px 20px; text-decoration:none; border-radius:5px; display:inline-block; font-weight:600; transition:background 0.3s;}
-    .btn:hover{background:#6b4423;}
 
-    /* NEW: CTA Section */
-    .cta-section{background:#8B5A2B; color:white; text-align:center; padding:50px 20px; margin-top:60px; border-radius:10px;}
-    .cta-section h2{font-size:32px; margin-bottom:15px;}
-    .cta-btn{background:#fbbf24; color:#8B5A2B; padding:12px 30px; text-decoration:none; border-radius:5px; font-weight:700; display:inline-block; margin-top:15px;}
-    .cta-btn:hover{background:white;}
+    .cta-section h2{
+        font-size:26px;
+    }
 
-    /* NEW: WhatsApp Button */
-    .whatsapp-float{position:fixed; bottom:20px; right:20px; background:#25D366; color:white; width:60px; height:60px; border-radius:50%; text-align:center; font-size:30px; line-height:60px; z-index:999; text-decoration:none; box-shadow:0 4px 10px rgba(0,0,0,0.3);}
-    
-    footer{background:#8B5A2B; color:white; text-align:center; padding:20px; margin-top:50px;}
+    .whatsapp-float{
+        width:52px;
+        height:52px;
+        font-size:24px;
+        right:15px;
+        bottom:15px;
+    }
+}
 </style>
 </head>
+
 <body>
 
 <header>
-    <h2>Home Decor Studio</h2>
-    <nav>
-    <a href="index.html">Home</a>
-    <a href="about-us.html">About Us</a>
-    <a href="categories.html">Categories</a>
-    <a href="blog.html">Blog</a>
-    <a href="faq.html">FAQ</a>
-    <a href="contact-us.html">Contact</a>
-</nav>
+    <div class="header-inner">
+
+        <a href="index.html" class="logo">Home Decor Studio</a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about-us.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="project-details.html">Projects</a>
+            <a href="packages.html">Packages</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact-us.html">Contact</a>
+            <a href="get-a-quote.html">Get a Quote</a>
+            <a href="book-consultation.html">Book Consultation</a>
+        </nav>
+
+    </div>
 </header>
 
-<div class="container">
-    <h1>Our Design Categories</h1>
-    <p class="subtitle">Explore our interior design services for every room in your home</p>
-    
-    <!-- NEW: Filter Buttons -->
-    <div class="filter-btns">
-        <button class="filter-btn active">All</button>
-        <button class="filter-btn">Living</button>
-        <button class="filter-btn">Bedroom</button>
-        <button class="filter-btn">Kitchen</button>
-        <button class="filter-btn">Office</button>
+<section class="hero">
+    <div class="hero-content">
+        <h1>Interior Design Categories</h1>
+        <p>
+            Explore carefully planned interior solutions for every room,
+            property type and lifestyle.
+        </p>
     </div>
-    
-    <div class="categories-grid">
-        
-        <div class="category-card">
-            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600" alt="Living Room Design">
-            <div class="category-content">
-                <h3>Living Room</h3>
-                <p>Make your living room stylish and comfortable. Modern sofas, TV walls, and lighting solutions.</p>
-                <a href="contact-us.html" class="btn">View Projects</a>
-            </div>
-        </div>
+</section>
 
-        <div class="category-card">
-            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600" alt="Bedroom Design">
-            <div class="category-content">
-                <h3>Bedroom</h3>
-                <p>Create your peaceful retreat. Wardrobe design, bed setup, and cozy bedroom interiors.</p>
-                <a href="contact-us.html" class="btn">View Projects</a>
-            </div>
-        </div>
-
-        <div class="category-card">
-            <img src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=600" alt="Kitchen Design">
-            <div class="category-content">
-                <h3>Kitchen</h3>
-                <p>Modern and functional kitchen designs. Modular kitchens, storage, and beautiful tiles.</p>
-                <a href="contact-us.html" class="btn">View Projects</a>
-            </div>
-        </div>
-
-        <div class="category-card">
-            <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=600" alt="Bathroom Design">
-            <div class="category-content">
-                <h3>Bathroom</h3>
-                <p>Luxury bathroom designs with smart storage and modern fixtures for your home.</p>
-                <a href="contact-us.html" class="btn">View Projects</a>
-            </div>
-        </div>
-
-        <div class="category-card">
-            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=600" alt="Office Design">
-            <div class="category-content">
-                <h3>Office</h3>
-                <p>Professional office and study room designs to boost productivity and comfort.</p>
-                <a href="contact-us.html" class="btn">View Projects</a>
-            </div>
-        </div>
-
-        <div class="category-card">
-            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=600" alt="Full House Design">
-            <div class="category-content">
-                <h3>Full House</h3>
-                <p>Complete home interior solutions from 2 bed to 5 bed houses. Turnkey projects.</p>
-                <a href="contact-us.html" class="btn">View Projects</a>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- NEW: CTA Section -->
-    <div class="cta-section">
-        <h2>Ready to Transform Your Home?</h2>
-        <p>Get a free consultation with our interior design experts today!</p>
-        <a href="contact-us.html" class="cta-btn">Get Free Quote</a>
-    </div>
-
+<div class="breadcrumb">
+    <a href="index.html">Home</a> / Categories
 </div>
 
-<!-- NEW: WhatsApp Float Button -->
-<a href="https://wa.me/923001234567" class="whatsapp-float" target="_blank">💬</a>
+<main class="container">
+
+    <div class="section-heading">
+        <h2>Our Design Categories</h2>
+        <p>
+            Discover beautiful and functional interior design ideas for
+            residential, commercial and complete home projects.
+        </p>
+    </div>
+
+    <div class="filter-btns">
+        <button class="filter-btn active" onclick="filterCategories('all', this)">All</button>
+        <button class="filter-btn" onclick="filterCategories('living', this)">Living</button>
+        <button class="filter-btn" onclick="filterCategories('bedroom', this)">Bedroom</button>
+        <button class="filter-btn" onclick="filterCategories('kitchen', this)">Kitchen</button>
+        <button class="filter-btn" onclick="filterCategories('office', this)">Office</button>
+        <button class="filter-btn" onclick="filterCategories('bathroom', this)">Bathroom</button>
+    </div>
+
+    <div class="categories-grid">
+
+        <!-- LIVING ROOM -->
+        <article class="category-card" data-category="living">
+            <img
+                src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85"
+                alt="Modern Living Room Interior Design"
+                loading="lazy"
+            >
+            <div class="category-content">
+                <h3>Living Room</h3>
+                <p>
+                    Stylish and comfortable living room interiors with
+                    modern furniture, TV walls, lighting and elegant layouts.
+                </p>
+                <a href="portfolio.html" class="btn">View Projects</a>
+            </div>
+        </article>
+
+        <!-- BEDROOM -->
+        <article class="category-card" data-category="bedroom">
+            <img
+                src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1000&q=85"
+                alt="Modern Bedroom Interior Design"
+                loading="lazy"
+            >
+            <div class="category-content">
+                <h3>Bedroom</h3>
+                <p>
+                    Peaceful bedroom interiors featuring comfortable beds,
+                    wardrobes, soft lighting and relaxing color palettes.
+                </p>
+                <a href="portfolio.html" class="btn">View Projects</a>
+            </div>
+        </article>
+
+        <!-- KITCHEN -->
+        <article class="category-card" data-category="kitchen">
+            <img
+                src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf?auto=format&fit=crop&w=1000&q=85"
+                alt="Modern Kitchen Interior Design"
+                loading="lazy"
+            >
+            <div class="category-content">
+                <h3>Kitchen</h3>
+                <p>
+                    Functional kitchen designs with smart storage,
+                    modern cabinets, countertops and practical layouts.
+                </p>
+                <a href="portfolio.html" class="btn">View Projects</a>
+            </div>
+        </article>
+
+        <!-- OFFICE -->
+        <article class="category-card" data-category="office">
+            <img
+                src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1000&q=85"
+                alt="Modern Office Interior Design"
+                loading="lazy"
+            >
+            <div class="category-content">
+                <h3>Office</h3>
+                <p>
+                    Professional office interiors designed for productivity,
+                    comfort, collaboration and a strong brand presence.
+                </p>
+                <a href="portfolio.html" class="btn">View Projects</a>
+            </div>
+        </article>
+
+        <!-- BATHROOM -->
+        <article class="category-card" data-category="bathroom">
+            <img
+                src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1000&q=85"
+                alt="Modern Bathroom Interior Design"
+                loading="lazy"
+            >
+            <div class="category-content">
+                <h3>Bathroom</h3>
+                <p>
+                    Elegant bathroom interiors with modern fixtures,
+                    practical storage, premium finishes and clean layouts.
+                </p>
+                <a href="portfolio.html" class="btn">View Projects</a>
+            </div>
+        </article>
+
+        <!-- FULL HOUSE -->
+        <article class="category-card" data-category="all">
+            <img
+                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85"
+                alt="Complete Home Interior Design"
+                loading="lazy"
+            >
+            <div class="category-content">
+                <h3>Full House</h3>
+                <p>
+                    Complete interior solutions for homes, combining living,
+                    bedroom, kitchen and other spaces into one cohesive design.
+                </p>
+                <a href="portfolio.html" class="btn">View Projects</a>
+            </div>
+        </article>
+
+    </div>
+
+    <section class="cta-section">
+        <h2>Ready to Transform Your Space?</h2>
+        <p>
+            Discuss your project with our interior design team and
+            get a personalized plan for your space.
+        </p>
+
+        <div class="cta-buttons">
+            <a href="get-a-quote.html" class="cta-btn">Get a Quote</a>
+            <a href="book-consultation.html" class="cta-btn secondary">
+                Book Consultation
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<a
+    href="https://wa.me/923001234567"
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener"
+    aria-label="Contact Home Decor Studio on WhatsApp"
+>💬</a>
 
 <footer>
-
     <p>© 2026 Home Decor Studio. All Rights Reserved.</p>
 
     <p>
@@ -176,8 +595,33 @@
         <a href="faq.html">FAQ</a> |
         <a href="contact-us.html">Contact</a>
     </p>
-
 </footer>
+
+<script>
+function filterCategories(category, button){
+
+    const cards = document.querySelectorAll(".category-card");
+    const buttons = document.querySelectorAll(".filter-btn");
+
+    buttons.forEach(btn => {
+        btn.classList.remove("active");
+    });
+
+    button.classList.add("active");
+
+    cards.forEach(card => {
+
+        const cardCategory = card.getAttribute("data-category");
+
+        if(category === "all" || cardCategory === category){
+            card.style.display = "block";
+        }else{
+            card.style.display = "none";
+        }
+
+    });
+}
+</script>
 
 </body>
 </html>

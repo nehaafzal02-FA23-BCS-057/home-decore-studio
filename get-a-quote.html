@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Get a Quote - Home Decor Studio</title>
+<meta name="description" content="Request a customized interior design quotation from Home Decor Studio. Get an estimated investment based on your property, area, design level and project requirements.">
+<meta name="keywords" content="interior design quote, home decor quote, interior design Pakistan, home interior cost">
+
+<meta property="og:title" content="Get a Quote - Home Decor Studio">
+<meta property="og:description" content="Request a customized interior design quotation from Home Decor Studio.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#faf7f2;
+    color:#333;
+    line-height:1.6;
+}
+
+header{
+    background:#fff;
+    padding:16px 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:100;
+    box-shadow:0 2px 10px #0001;
+}
+
+.logo{
+    font-size:23px;
+    font-weight:700;
+    color:#8b5a2b;
+    white-space:nowrap;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+}
+
+nav a{
+    margin:5px 7px;
+    text-decoration:none;
+    color:#333;
+    font-size:14px;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:#8b5a2b;
+}
+
+.hero{
+    text-align:center;
+    padding:70px 20px;
+    background:#f1e4d3;
+}
+
+.hero h1{
+    font-size:44px;
+    color:#6f4523;
+    margin-bottom:12px;
+}
+
+.hero p{
+    max-width:720px;
+    margin:auto;
+    font-size:16px;
+}
+
+.container{
+    width:90%;
+    max-width:950px;
+    margin:50px auto;
+}
+
+.form{
+    background:#fff;
+    padding:38px;
+    border-radius:18px;
+    box-shadow:0 5px 20px #0001;
+}
+
+.form h2{
+    color:#8b5a2b;
+    margin-bottom:8px;
+}
+
+.form-intro{
+    color:#666;
+    margin-bottom:25px;
+}
+
+.row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+label{
+    display:block;
+    font-weight:600;
+    margin-bottom:7px;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:12px 13px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    margin-bottom:18px;
+    font-family:inherit;
+    font-size:14px;
+    background:#fff;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    outline:none;
+    border-color:#8b5a2b;
+    box-shadow:0 0 0 2px #8b5a2b22;
+}
+
+textarea{
+    height:130px;
+    resize:vertical;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    background:#8b5a2b;
+    color:#fff;
+    border:0;
+    border-radius:8px;
+    font-family:inherit;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#6f4523;
+}
+
+.result{
+    display:none;
+    margin-top:25px;
+    padding:24px;
+    background:#f1e4d3;
+    border-radius:12px;
+    text-align:center;
+}
+
+.result h3{
+    color:#8b5a2b;
+    margin-bottom:8px;
+}
+
+.result p{
+    font-size:22px;
+    font-weight:700;
+    color:#6f4523;
+    margin-bottom:8px;
+}
+
+.result small{
+    color:#555;
+}
+
+.cta{
+    text-align:center;
+    background:#8b5a2b;
+    color:#fff;
+    padding:50px 20px;
+}
+
+.cta h2{
+    margin-bottom:8px;
+}
+
+.cta p{
+    max-width:650px;
+    margin:auto;
+}
+
+.cta a{
+    display:inline-block;
+    margin-top:18px;
+    background:#fff;
+    color:#8b5a2b;
+    padding:11px 22px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.cta a:hover{
+    background:#f5e6d3;
+}
+
+footer{
+    text-align:center;
+    background:#2f241b;
+    color:#fff;
+    padding:25px;
+}
+
+footer p{
+    font-size:14px;
+}
+
+@media(max-width:900px){
+
+    nav a{
+        margin:4px 5px;
+        font-size:13px;
+    }
+
+}
+
+@media(max-width:700px){
+
+    header{
+        padding:15px 5%;
+    }
+
+    nav{
+        display:none;
+    }
+
+    .hero{
+        padding:55px 20px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .row{
+        grid-template-columns:1fr;
+        gap:0;
+    }
+
+    .container{
+        width:92%;
+        margin:35px auto;
+    }
+
+    .form{
+        padding:25px 20px;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Home Decor Studio</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about-us.html">About</a>
+<a href="services.html">Services</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="project-details.html">Projects</a>
+<a href="packages.html">Packages</a>
+<a href="blog.html">Blog</a>
+<a href="contact-us.html">Contact</a>
+<a href="get-a-quote.html">Get a Quote</a>
+<a href="book-consultation.html">Book Consultation</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>Get a Customized Quote</h1>
+
+<p>
+Tell us about your property, space and requirements.
+We will help you understand your estimated interior investment.
+</p>
+
+</section>
+
+<section class="container">
+
+<div class="form">
+
+<h2>Project Information</h2>
+
+<p class="form-intro">
+Please provide your project details to receive an estimated interior design investment range.
+</p>
+
+<form id="quoteForm">
+
+<div class="row">
+
+<div>
+<label for="name">Full Name *</label>
+<input type="text" id="name" placeholder="Enter your full name" required>
+</div>
+
+<div>
+<label for="email">Email *</label>
+<input type="email" id="email" placeholder="Enter your email address" required>
+</div>
+
+</div>
+
+<div class="row">
+
+<div>
+<label for="phone">Phone Number *</label>
+<input type="tel" id="phone" placeholder="Enter your phone number" required>
+</div>
+
+<div>
+<label for="city">City *</label>
+
+<select id="city" required>
+<option value="">Select City</option>
+<option>Islamabad</option>
+<option>Rawalpindi</option>
+<option>Lahore</option>
+<option>Karachi</option>
+<option>Other</option>
+</select>
+
+</div>
+
+</div>
+
+<label for="property">Property Type *</label>
+
+<select id="property" required>
+<option value="">Select Property</option>
+<option>Apartment</option>
+<option>House</option>
+<option>Villa</option>
+<option>Office</option>
+<option>Restaurant / Cafe</option>
+<option>Other</option>
+</select>
+
+<div class="row">
+
+<div>
+
+<label for="area">Approximate Area (sq. ft.) *</label>
+
+<input
+type="number"
+id="area"
+min="100"
+placeholder="e.g. 1500"
+required
+>
+
+</div>
+
+<div>
+
+<label for="rooms">Number of Rooms</label>
+
+<select id="rooms">
+<option>1 - 2</option>
+<option>3 - 4</option>
+<option>5 - 6</option>
+<option>7+</option>
+</select>
+
+</div>
+
+</div>
+
+<label for="level">Design Level *</label>
+
+<select id="level" required>
+
+<option value="">Select Design Level</option>
+<option value="basic">Basic</option>
+<option value="premium">Premium</option>
+<option value="luxury">Luxury</option>
+
+</select>
+
+<label for="timeline">Project Timeline</label>
+
+<select id="timeline">
+
+<option>As soon as possible</option>
+<option>Within 1 - 3 months</option>
+<option>Within 3 - 6 months</option>
+<option>Flexible</option>
+
+</select>
+
+<label for="requirements">Project Requirements</label>
+
+<textarea
+id="requirements"
+placeholder="Describe your requirements, preferred style, rooms and any special requests..."
+></textarea>
+
+<button type="submit">
+Calculate Estimated Investment
+</button>
+
+<div class="result" id="result">
+
+<h3>Estimated Investment Range</h3>
+
+<p id="estimate"></p>
+
+<small>
+This is an estimated range only. Final pricing depends on detailed project requirements, materials and execution scope.
+</small>
+
+</div>
+
+</form>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<h2>Need Professional Interior Design Help?</h2>
+
+<p>
+Book a consultation with Home Decor Studio and discuss your project with our design team.
+</p>
+
+<a href="book-consultation.html">
+Book a Consultation
+</a>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 Home Decor Studio. All Rights Reserved.
+</p>
+
+</footer>
+
+<script>
+
+document.getElementById("quoteForm").addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    const area = Number(document.getElementById("area").value);
+    const level = document.getElementById("level").value;
+
+    let rateMin = 0;
+    let rateMax = 0;
+
+    if(level === "basic"){
+        rateMin = 1800;
+        rateMax = 2800;
+    }
+
+    else if(level === "premium"){
+        rateMin = 2800;
+        rateMax = 4200;
+    }
+
+    else if(level === "luxury"){
+        rateMin = 4200;
+        rateMax = 6500;
+    }
+
+    const minimum = area * rateMin;
+    const maximum = area * rateMax;
+
+    const formattedMinimum = minimum.toLocaleString("en-PK");
+    const formattedMaximum = maximum.toLocaleString("en-PK");
+
+    document.getElementById("estimate").textContent =
+        "PKR " + formattedMinimum + " - PKR " + formattedMaximum;
+
+    document.getElementById("result").style.display = "block";
+
+    document.getElementById("result").scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+    });
+
+});
+
+</script>
+
+</body>
+</html>
