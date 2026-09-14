@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Book Consultation - Home Decor Studio</title>
+
+<meta name="description" content="Book a free interior design consultation with Home Decor Studio. Discuss your residential or commercial interior project with our design team.">
+
+<meta property="og:title" content="Book Consultation - Home Decor Studio">
+<meta property="og:description" content="Book a free interior design consultation with Home Decor Studio.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#faf7f2;
+    color:#333;
+    line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+    background:#8b5a2b;
+    color:white;
+    padding:18px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+    white-space:nowrap;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:16px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#fbbf24;
+}
+
+/* HERO */
+
+.hero{
+    text-align:center;
+    padding:70px 20px;
+    background:#f1e4d3;
+}
+
+.hero h1{
+    font-size:44px;
+    color:#6f4523;
+    margin-bottom:12px;
+}
+
+.hero p{
+    font-size:17px;
+    color:#555;
+}
+
+/* FORM */
+
+.container{
+    width:88%;
+    max-width:900px;
+    margin:55px auto;
+}
+
+.form{
+    background:white;
+    padding:38px;
+    border-radius:18px;
+    box-shadow:0 5px 22px #0001;
+}
+
+.form h2{
+    color:#8b5a2b;
+    margin-bottom:25px;
+    font-size:28px;
+}
+
+.row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+label{
+    display:block;
+    font-weight:600;
+    margin-bottom:7px;
+    color:#444;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:13px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    margin-bottom:20px;
+    font-family:inherit;
+    font-size:14px;
+    background:#fff;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    outline:none;
+    border-color:#8b5a2b;
+    box-shadow:0 0 0 2px #8b5a2b22;
+}
+
+textarea{
+    height:130px;
+    resize:vertical;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    background:#8b5a2b;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-family:inherit;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#fbbf24;
+    color:#333;
+}
+
+/* SUCCESS */
+
+.success{
+    display:none;
+    margin-top:20px;
+    padding:16px;
+    background:#e7f6e7;
+    color:#286628;
+    border-radius:8px;
+    text-align:center;
+}
+
+/* CTA NOTE */
+
+.note{
+    margin-top:25px;
+    padding:18px;
+    background:#f8f1e8;
+    border-radius:10px;
+    color:#666;
+    font-size:14px;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    background:#2f241b;
+    color:white;
+    padding:25px;
+    margin-top:50px;
+}
+
+footer p{
+    font-size:14px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    header{
+        flex-direction:column;
+        gap:12px;
+    }
+
+}
+
+@media(max-width:700px){
+
+    .row{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    nav{
+        gap:10px;
+    }
+
+    nav a{
+        font-size:12px;
+    }
+
+    .container{
+        width:92%;
+    }
+
+    .form{
+        padding:25px 20px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Home Decor Studio</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="about-us.html">About</a>
+<a href="services.html">Services</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="project-details.html">Projects</a>
+<a href="packages.html">Packages</a>
+<a href="blog.html">Blog</a>
+<a href="contact-us.html">Contact</a>
+<a href="get-a-quote.html">Get a Quote</a>
+<a href="book-consultation.html">Book Consultation</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>Book a Consultation</h1>
+
+<p>
+Tell us about your project and let's plan your dream interior.
+</p>
+
+</section>
+
+<section class="container">
+
+<div class="form">
+
+<h2>Consultation Details</h2>
+
+<form id="consultationForm">
+
+<div class="row">
+
+<div>
+
+<label for="name">
+Full Name *
+</label>
+
+<input
+type="text"
+id="name"
+required
+placeholder="Enter your full name"
+>
+
+</div>
+
+<div>
+
+<label for="email">
+Email *
+</label>
+
+<input
+type="email"
+id="email"
+required
+placeholder="Enter your email"
+>
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div>
+
+<label for="phone">
+Phone Number *
+</label>
+
+<input
+type="tel"
+id="phone"
+required
+placeholder="Enter your phone number"
+>
+
+</div>
+
+<div>
+
+<label for="type">
+Project Type *
+</label>
+
+<select id="type" required>
+
+<option value="">
+Select project type
+</option>
+
+<option>Residential Interior</option>
+<option>Commercial Interior</option>
+<option>Renovation</option>
+<option>Kitchen</option>
+<option>Bedroom</option>
+<option>Living Room</option>
+<option>Full Home Design</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div>
+
+<label for="date">
+Preferred Date *
+</label>
+
+<input
+type="date"
+id="date"
+required
+>
+
+</div>
+
+<div>
+
+<label for="time">
+Preferred Time *
+</label>
+
+<select id="time" required>
+
+<option value="">
+Select time
+</option>
+
+<option>10:00 AM - 12:00 PM</option>
+<option>12:00 PM - 2:00 PM</option>
+<option>2:00 PM - 4:00 PM</option>
+<option>4:00 PM - 6:00 PM</option>
+
+</select>
+
+</div>
+
+</div>
+
+<label for="consultation">
+Consultation Type *
+</label>
+
+<select id="consultation" required>
+
+<option value="">
+Select consultation type
+</option>
+
+<option>Online Consultation</option>
+<option>In-Person Consultation</option>
+
+</select>
+
+<label for="requirements">
+Project Requirements
+</label>
+
+<textarea
+id="requirements"
+placeholder="Tell us about your space, requirements, preferred style and approximate area..."
+></textarea>
+
+<button type="submit">
+Book Free Consultation
+</button>
+
+<div class="success" id="success">
+
+<strong>Consultation Request Submitted!</strong>
+
+<br>
+
+Thank you. Our team will contact you soon to confirm your consultation.
+
+</div>
+
+<div class="note">
+
+<strong>Note:</strong>
+This form is a demo for the Home Decor Studio website.
+After submission, the request confirmation is displayed on the page.
+
+</div>
+
+</form>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 Home Decor Studio. All Rights Reserved.
+</p>
+
+</footer>
+
+<script>
+
+document
+.getElementById("consultationForm")
+.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    document
+    .getElementById("success")
+    .style.display = "block";
+
+    this.reset();
+
+});
+
+</script>
+
+</body>
+</html>

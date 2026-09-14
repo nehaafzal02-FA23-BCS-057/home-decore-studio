@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portfolio - Home Decor Studio</title>
+
+<meta name="description" content="Explore Home Decor Studio interior design projects including modern residential, commercial, luxury, kitchen and bedroom designs.">
+
+<meta property="og:title" content="Portfolio - Home Decor Studio">
+<meta property="og:description" content="Explore our interior design projects and transformations.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#faf7f2;
+    color:#333;
+    line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+    background:#8b5a2b;
+    color:white;
+    padding:18px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 12px rgba(0,0,0,0.15);
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+    white-space:nowrap;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    gap:16px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#fbbf24;
+}
+
+/* HERO */
+
+.hero{
+    text-align:center;
+    padding:80px 20px;
+    background:#f1e4d3;
+}
+
+.hero h1{
+    font-size:46px;
+    color:#6f4523;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:750px;
+    margin:auto;
+    font-size:17px;
+    color:#555;
+}
+
+/* FILTERS */
+
+.filters{
+    text-align:center;
+    padding:40px 15px 25px;
+}
+
+.filters button{
+    border:none;
+    background:white;
+    color:#333;
+    padding:12px 22px;
+    margin:5px;
+    border-radius:25px;
+    cursor:pointer;
+    font-family:'Poppins',sans-serif;
+    font-weight:600;
+    box-shadow:0 2px 8px #0001;
+    transition:.3s;
+}
+
+.filters button:hover,
+.filters button.active{
+    background:#8b5a2b;
+    color:white;
+}
+
+/* PORTFOLIO */
+
+.container{
+    width:88%;
+    max-width:1250px;
+    margin:auto;
+    padding:20px 0 70px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+}
+
+.project{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 20px #0001;
+    transition:.3s;
+}
+
+.project:hover{
+    transform:translateY(-7px);
+    box-shadow:0 12px 28px #0002;
+}
+
+.image{
+    height:220px;
+    overflow:hidden;
+}
+
+.image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.4s;
+}
+
+.project:hover .image img{
+    transform:scale(1.04);
+}
+
+.info{
+    padding:23px;
+}
+
+.info h2{
+    color:#8b5a2b;
+    font-size:21px;
+    margin-bottom:10px;
+}
+
+.info p{
+    margin:5px 0;
+    color:#666;
+    font-size:14px;
+}
+
+.info a{
+    display:inline-block;
+    margin-top:14px;
+    padding:10px 18px;
+    background:#8b5a2b;
+    color:white;
+    text-decoration:none;
+    border-radius:7px;
+    transition:.3s;
+    font-weight:500;
+}
+
+.info a:hover{
+    background:#fbbf24;
+    color:#333;
+}
+
+/* CTA */
+
+.cta{
+    text-align:center;
+    background:#8b5a2b;
+    color:white;
+    padding:60px 20px;
+}
+
+.cta h2{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.cta p{
+    margin-bottom:20px;
+}
+
+.cta a{
+    display:inline-block;
+    background:white;
+    color:#8b5a2b;
+    padding:12px 26px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.cta a:hover{
+    background:#fbbf24;
+    color:#333;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    background:#2f241b;
+    color:white;
+    padding:25px;
+}
+
+footer p{
+    font-size:14px;
+}
+
+/* TABLET */
+
+@media(max-width:1000px){
+
+    header{
+        flex-direction:column;
+        gap:14px;
+    }
+
+    .logo{
+        margin-bottom:3px;
+    }
+
+    .grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    header{
+        padding:16px 12px;
+    }
+
+    .logo{
+        font-size:21px;
+    }
+
+    nav{
+        gap:9px;
+    }
+
+    nav a{
+        font-size:11px;
+    }
+
+    .hero{
+        padding:60px 18px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .filters{
+        padding:30px 10px 20px;
+    }
+
+    .filters button{
+        padding:9px 16px;
+        font-size:13px;
+    }
+
+    .container{
+        width:92%;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .image{
+        height:230px;
+    }
+
+    .cta h2{
+        font-size:27px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Home Decor Studio</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="about-us.html">About</a>
+
+<a href="services.html">Services</a>
+
+<a href="portfolio.html">Portfolio</a>
+
+<!-- CORRECT FILE NAME -->
+<a href="project-details.html">Projects</a>
+
+<a href="packages.html">Packages</a>
+
+<a href="blog.html">Blog</a>
+
+<a href="contact-us.html">Contact</a>
+
+<a href="get-a-quote.html">Get a Quote</a>
+
+<a href="book-consultation.html">Book Consultation</a>
+
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<h1>Our Portfolio</h1>
+
+<p>
+Explore our interior design projects and discover how we transform
+spaces into beautiful, comfortable and functional environments.
+</p>
+
+</section>
+
+
+<div class="filters">
+
+<button class="active" onclick="filterProjects('all', this)">
+All
+</button>
+
+<button onclick="filterProjects('residential', this)">
+Residential
+</button>
+
+<button onclick="filterProjects('commercial', this)">
+Commercial
+</button>
+
+<button onclick="filterProjects('luxury', this)">
+Luxury
+</button>
+
+<button onclick="filterProjects('kitchen', this)">
+Kitchen
+</button>
+
+<button onclick="filterProjects('bedroom', this)">
+Bedroom
+</button>
+
+</div>
+
+
+<section class="container">
+
+<div class="grid">
+
+
+<!-- PROJECT 1 -->
+
+<div class="project residential luxury">
+
+<div class="image">
+
+<img
+src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85"
+alt="Modern luxury villa interior"
+loading="lazy">
+
+</div>
+
+<div class="info">
+
+<h2>Modern Luxury Villa</h2>
+
+<p><b>Type:</b> Residential</p>
+
+<p><b>Style:</b> Luxury Modern</p>
+
+<p><b>Location:</b> Islamabad</p>
+
+<a href="project-details.html">
+View Project
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PROJECT 2 -->
+
+<div class="project residential">
+
+<div class="image">
+
+<img
+src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85"
+alt="Contemporary living room"
+loading="lazy">
+
+</div>
+
+<div class="info">
+
+<h2>Contemporary Living Room</h2>
+
+<p><b>Type:</b> Residential</p>
+
+<p><b>Style:</b> Contemporary</p>
+
+<p><b>Location:</b> Lahore</p>
+
+<a href="project-details.html">
+View Project
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PROJECT 3 -->
+
+<div class="project commercial">
+
+<div class="image">
+
+<img
+src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1000&q=85"
+alt="Modern corporate office"
+loading="lazy">
+
+</div>
+
+<div class="info">
+
+<h2>Corporate Office</h2>
+
+<p><b>Type:</b> Commercial</p>
+
+<p><b>Style:</b> Modern</p>
+
+<p><b>Location:</b> Islamabad</p>
+
+<a href="project-details.html">
+View Project
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PROJECT 4 -->
+
+<div class="project kitchen luxury">
+
+<div class="image">
+
+<img
+src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf?auto=format&fit=crop&w=1000&q=85"
+alt="Luxury modern kitchen"
+loading="lazy">
+
+</div>
+
+<div class="info">
+
+<h2>Premium Kitchen</h2>
+
+<p><b>Type:</b> Kitchen</p>
+
+<p><b>Style:</b> Luxury</p>
+
+<p><b>Location:</b> Lahore</p>
+
+<a href="project-details.html">
+View Project
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PROJECT 5 -->
+
+<div class="project bedroom residential">
+
+<div class="image">
+
+<img
+src="https://images.unsplash.com/photo-1617325710236-4a36d2a1b0d3?auto=format&fit=crop&w=1000&q=85"
+alt="Minimalist bedroom interior"
+loading="lazy">
+
+</div>
+
+<div class="info">
+
+<h2>Minimalist Bedroom</h2>
+
+<p><b>Type:</b> Bedroom</p>
+
+<p><b>Style:</b> Minimalist</p>
+
+<p><b>Location:</b> Karachi</p>
+
+<a href="project-details.html">
+View Project
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<section class="cta">
+
+<h2>Ready to Start Your Project?</h2>
+
+<p>
+Let us create a beautiful and functional space designed especially for you.
+</p>
+
+<a href="get-a-quote.html">
+Get a Quote
+</a>
+
+</section>
+
+
+<footer>
+
+<p>
+© 2026 Home Decor Studio. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<script>
+
+function filterProjects(category, button){
+
+    const projects = document.querySelectorAll('.project');
+    const buttons = document.querySelectorAll('.filters button');
+
+    buttons.forEach(btn => {
+        btn.classList.remove('active');
+    });
+
+    button.classList.add('active');
+
+    projects.forEach(project => {
+
+        if(category === 'all' || project.classList.contains(category)){
+
+            project.style.display = 'block';
+
+        }else{
+
+            project.style.display = 'none';
+
+        }
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>

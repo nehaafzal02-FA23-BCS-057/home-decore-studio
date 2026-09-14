@@ -3,123 +3,839 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Home Decor Studio - Beautiful Interior Designs in Pakistan</title>
-<meta name="description" content="Home Decor Studio offers modern interior design for Living Room, Bedroom, Kitchen in Pakistan. 500+ Happy Clients.">
+<meta name="description" content="Home Decor Studio creates beautiful residential and commercial interior designs in Pakistan, including living rooms, bedrooms, kitchens and complete home interiors.">
+
+<meta property="og:title" content="Home Decor Studio - Interior Design Pakistan">
+<meta property="og:description" content="Beautiful, functional and personalized interior designs for homes and businesses across Pakistan.">
+<meta property="og:type" content="website">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-    *{margin:0; padding:0; box-sizing:border-box;}
-    body{font-family:'Poppins', Arial, sans-serif; line-height:1.6; color:#333; background:#fff;}
-    header{background:#8B5A2B; color:white; padding:20px; text-align:center; position:sticky; top:0; z-index:100;}
-    nav a{color:white; margin:0 15px; text-decoration:none; font-weight:bold;}
-    nav a:hover{color:#fbbf24;}
-    .hero{background:#f5e6d3; padding:80px 20px; text-align:center;}
-    .hero h1{font-size:42px; color:#8B5A2B; margin-bottom:10px;}
-    .hero p{font-size:18px; margin-bottom:20px;}
-    .btn{background:#8B5A2B; color:white; padding:12px 30px; text-decoration:none; border-radius:5px; display:inline-block; font-weight:bold;}
-    .btn:hover{background:#6b4423;}
-    .container{max-width:1200px; margin:50px auto; padding:20px;}
-    h2{text-align:center; color:#8B5A2B; margin-bottom:30px; font-size:32px;}
-    .cards{display:flex; gap:20px; flex-wrap:wrap; justify-content:center;}
-    .card{border:1px solid #ddd; padding:25px; width:300px; border-radius:10px; text-align:center; background:white; box-shadow:0 2px 8px rgba(0,0,0,0.1); transition:0.3s;}
-    .card:hover{transform:translateY(-5px);}
-    .why-us{background:#f5e6d3; padding:50px 20px;}
-    .why-list{display:flex; gap:20px; flex-wrap:wrap; justify-content:center; max-width:1000px; margin:auto;}
-    .why-item{background:white; padding:20px; border-radius:8px; width:220px; text-align:center; font-weight:bold;}
-    .blog-card{background:white; border:1px solid #ddd; border-radius:10px; padding:25px; max-width:500px; margin:auto; text-align:left;}
-    .testimonial{
-        background:#fff; 
-        padding:20px; 
-        border-right:4px solid #8B5A2B; /* اردو کے لیے right */
-        margin:10px; 
-        border-radius:5px;
-        text-align:right; /* اردو دائیں سے */
-        direction:rtl; /* اردو کی direction */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',Arial,sans-serif;
+    line-height:1.7;
+    color:#333;
+    background:#fafafa;
+}
+
+/* HEADER */
+header{
+    background:#8B5A2B;
+    color:white;
+    padding:18px 20px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 12px rgba(0,0,0,0.15);
+}
+
+.header-inner{
+    max-width:1250px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    color:white;
+    text-decoration:none;
+    font-size:25px;
+    font-weight:700;
+    white-space:nowrap;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+    gap:8px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+    padding:8px 10px;
+    border-radius:5px;
+    transition:0.3s;
+}
+
+nav a:hover,
+nav a.active{
+    color:#fbbf24;
+}
+
+/* HERO */
+.hero{
+    background:
+        linear-gradient(rgba(70,40,15,0.65),rgba(70,40,15,0.65)),
+        url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=85")
+        center/cover;
+    min-height:500px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:70px 20px;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.hero h1{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:25px;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.btn{
+    display:inline-block;
+    background:#8B5A2B;
+    color:white;
+    padding:12px 28px;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:700;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#6b4423;
+}
+
+.hero .btn{
+    background:#fbbf24;
+    color:#8B5A2B;
+}
+
+.hero .btn:hover{
+    background:white;
+}
+
+.hero .btn.secondary{
+    background:white;
+}
+
+.hero .btn.secondary:hover{
+    background:#fbbf24;
+}
+
+/* CONTAINER */
+.container{
+    max-width:1200px;
+    margin:60px auto;
+    padding:0 20px;
+}
+
+.section-heading{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.section-heading h2{
+    color:#8B5A2B;
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.section-heading p{
+    color:#666;
+    max-width:700px;
+    margin:auto;
+}
+
+/* SERVICE CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 14px rgba(0,0,0,0.09);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.14);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    display:block;
+}
+
+.card-content{
+    padding:22px;
+}
+
+.card h3{
+    color:#8B5A2B;
+    font-size:22px;
+    margin-bottom:8px;
+}
+
+.card p{
+    color:#666;
+    font-size:14px;
+    margin-bottom:15px;
+}
+
+/* WHY US */
+.why-us{
+    background:#f5e6d3;
+    padding:65px 20px;
+}
+
+.why-us h2{
+    text-align:center;
+    color:#8B5A2B;
+    font-size:34px;
+    margin-bottom:35px;
+}
+
+.why-list{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.why-item{
+    background:white;
+    padding:28px 18px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 3px 10px rgba(0,0,0,0.07);
+}
+
+.why-icon{
+    font-size:32px;
+    margin-bottom:8px;
+}
+
+.why-item h3{
+    color:#8B5A2B;
+    font-size:18px;
+    margin-bottom:5px;
+}
+
+.why-item p{
+    color:#666;
+    font-size:13px;
+}
+
+/* FEATURED PROJECT */
+.project-preview{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+    align-items:center;
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 14px rgba(0,0,0,0.08);
+}
+
+.project-preview img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+}
+
+.project-content{
+    padding:30px;
+}
+
+.project-content h3{
+    color:#8B5A2B;
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.project-content p{
+    color:#666;
+    margin-bottom:18px;
+}
+
+/* BLOG */
+.blog-card{
+    background:white;
+    border-radius:12px;
+    padding:28px;
+    max-width:750px;
+    margin:auto;
+    box-shadow:0 4px 14px rgba(0,0,0,0.08);
+}
+
+.blog-card h3{
+    color:#8B5A2B;
+    font-size:23px;
+    margin-bottom:10px;
+}
+
+.blog-card p{
+    color:#666;
+    margin-bottom:15px;
+}
+
+/* TESTIMONIALS */
+.testimonials{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.testimonial{
+    background:white;
+    padding:25px;
+    border-left:4px solid #8B5A2B;
+    border-radius:8px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.07);
+}
+
+.testimonial p{
+    color:#555;
+    margin-bottom:10px;
+}
+
+.testimonial b{
+    color:#8B5A2B;
+}
+
+/* CTA */
+.cta{
+    background:#8B5A2B;
+    color:white;
+    text-align:center;
+    padding:60px 25px;
+    margin:60px auto;
+    max-width:1200px;
+    border-radius:12px;
+}
+
+.cta h2{
+    font-size:34px;
+    margin-bottom:12px;
+}
+
+.cta p{
+    margin-bottom:18px;
+}
+
+.cta .btn{
+    background:#fbbf24;
+    color:#8B5A2B;
+}
+
+.cta .btn:hover{
+    background:white;
+}
+
+/* WHATSAPP */
+.whatsapp-float{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:58px;
+    height:58px;
+    background:#25D366;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    text-decoration:none;
+    z-index:999;
+    box-shadow:0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* FOOTER */
+footer{
+    background:#8B5A2B;
+    color:white;
+    text-align:center;
+    padding:28px 20px;
+    margin-top:50px;
+}
+
+footer p{
+    margin:6px 0;
+    font-size:14px;
+}
+
+footer a{
+    color:white;
+    text-decoration:none;
+}
+
+footer a:hover{
+    color:#fbbf24;
+}
+
+/* RESPONSIVE */
+@media(max-width:1050px){
+
+    .header-inner{
+        flex-direction:column;
     }
-    .testimonial b{direction:ltr; display:block; text-align:left; margin-top:10px;} /* نام بائیں */
-    footer{background:#333; color:white; text-align:center; padding:30px 20px; margin-top:40px;}
-    footer a{color:#fbbf24; margin:0 10px; text-decoration:none;}
-    @media(max-width:768px){.cards, .why-list{flex-direction:column; align-items:center;}}
+
+    nav{
+        justify-content:center;
+    }
+
+    .why-list{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:800px){
+
+    .hero{
+        min-height:420px;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .cards{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .project-preview{
+        grid-template-columns:1fr;
+    }
+
+    .testimonials{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:550px){
+
+    header{
+        padding:15px 10px;
+    }
+
+    .logo{
+        font-size:21px;
+    }
+
+    nav{
+        gap:2px;
+    }
+
+    nav a{
+        font-size:11px;
+        padding:5px 6px;
+    }
+
+    .hero{
+        min-height:380px;
+        padding:50px 15px;
+    }
+
+    .hero h1{
+        font-size:31px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .container{
+        margin:45px auto;
+        padding:0 15px;
+    }
+
+    .section-heading h2,
+    .why-us h2{
+        font-size:28px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .why-list{
+        grid-template-columns:1fr;
+    }
+
+    .project-preview img{
+        height:260px;
+    }
+
+    .project-content{
+        padding:22px;
+    }
+
+    .project-content h3{
+        font-size:24px;
+    }
+
+    .cta{
+        margin:45px 15px;
+        padding:45px 20px;
+    }
+
+    .cta h2{
+        font-size:27px;
+    }
+
+    .whatsapp-float{
+        width:52px;
+        height:52px;
+        font-size:24px;
+        right:15px;
+        bottom:15px;
+    }
+}
 </style>
 </head>
+
 <body>
 
 <header>
-    <h2>Home Decor Studio</h2>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about-us.html">About Us</a>
-        <a href="categories.html">Categories</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact-us.html">Contact</a>
-    </nav>
+    <div class="header-inner">
+
+        <a href="index.html" class="logo">Home Decor Studio</a>
+
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="about-us.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+
+            <!-- CORRECT PROJECT LINK -->
+            <a href="project-details.html">Projects</a>
+
+            <a href="packages.html">Packages</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact-us.html">Contact</a>
+            <a href="get-a-quote.html">Get a Quote</a>
+            <a href="book-consultation.html">Book Consultation</a>
+        </nav>
+
+    </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-    <h1>Beautiful Interior Designs</h1>
-    <p>Design Your Dream Home With Us</p>
-    <a href="categories.html" class="btn">Explore More</a>
+
+    <div class="hero-content">
+
+        <h1>Beautiful Interior Designs</h1>
+
+        <p>
+            Design your dream home or business space with
+            Home Decor Studio.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="portfolio.html" class="btn">Explore Portfolio</a>
+            <a href="book-consultation.html" class="btn secondary">
+                Book Consultation
+            </a>
+        </div>
+
+    </div>
+
 </section>
 
-<div class="container">
-    <h2>Our Services</h2>
-    <div class="cards">
-        <div class="card">
-            <h3>Living Room</h3>
-            <p>Modern and cozy living room designs for your family.</p>
-        </div>
-        <div class="card">
-            <h3>Bedroom</h3>
-            <p>Peaceful and stylish bedroom interiors.</p>
-        </div>
-        <div class="card">
-            <h3>Kitchen</h3>
-            <p>Smart and beautiful kitchen designs.</p>
-        </div>
-    </div>
-</div>
+<!-- SERVICES -->
+<section class="container">
 
+    <div class="section-heading">
+        <h2>Our Interior Design Services</h2>
+        <p>
+            Creative and functional interior solutions designed
+            around your lifestyle, space and requirements.
+        </p>
+    </div>
+
+    <div class="cards">
+
+        <article class="card">
+
+            <img
+                src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85"
+                alt="Modern Living Room Interior Design"
+                loading="lazy"
+            >
+
+            <div class="card-content">
+                <h3>Living Room Design</h3>
+
+                <p>
+                    Modern and comfortable living room interiors with
+                    elegant furniture, lighting and personalized layouts.
+                </p>
+
+                <a href="services.html" class="btn">Explore Service</a>
+            </div>
+
+        </article>
+
+        <article class="card">
+
+            <img
+                src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1000&q=85"
+                alt="Modern Bedroom Interior Design"
+                loading="lazy"
+            >
+
+            <div class="card-content">
+                <h3>Bedroom Design</h3>
+
+                <p>
+                    Peaceful and stylish bedroom spaces designed for
+                    comfort, relaxation and everyday living.
+                </p>
+
+                <a href="categories.html" class="btn">Explore Category</a>
+            </div>
+
+        </article>
+
+        <article class="card">
+
+            <img
+                src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf?auto=format&fit=crop&w=1000&q=85"
+                alt="Modern Kitchen Interior Design"
+                loading="lazy"
+            >
+
+            <div class="card-content">
+                <h3>Kitchen Design</h3>
+
+                <p>
+                    Smart and beautiful kitchen designs with practical
+                    storage, modern cabinets and functional layouts.
+                </p>
+
+                <a href="services.html" class="btn">Explore Service</a>
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!-- WHY CHOOSE US -->
 <section class="why-us">
+
     <h2>Why Choose Home Decor Studio?</h2>
+
     <div class="why-list">
-        <div class="why-item">✓ 500+ Happy Clients</div>
-        <div class="why-item">✓ Affordable Prices</div>
-        <div class="why-item">✓ Free Consultation</div>
-        <div class="why-item">✓ 24/7 Support</div>
+
+        <div class="why-item">
+            <div class="why-icon">🏠</div>
+            <h3>500+ Happy Clients</h3>
+            <p>Trusted by clients for beautiful interior projects.</p>
+        </div>
+
+        <div class="why-item">
+            <div class="why-icon">💰</div>
+            <h3>Flexible Budgets</h3>
+            <p>Design solutions for different budgets and requirements.</p>
+        </div>
+
+        <div class="why-item">
+            <div class="why-icon">🤝</div>
+            <h3>Free Consultation</h3>
+            <p>Discuss your ideas with our interior design team.</p>
+        </div>
+
+        <div class="why-item">
+            <div class="why-icon">⭐</div>
+            <h3>Professional Service</h3>
+            <p>Focused on quality, creativity and client satisfaction.</p>
+        </div>
+
     </div>
+
 </section>
 
-<div class="container">
-    <h2>Latest Blog</h2>
+<!-- FEATURED PROJECT -->
+<section class="container">
+
+    <div class="section-heading">
+        <h2>Featured Project</h2>
+        <p>
+            Explore one of our interior design case studies.
+        </p>
+    </div>
+
+    <div class="project-preview">
+
+        <img
+            src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1000&q=85"
+            alt="Modern Luxury Villa Interior Project"
+            loading="lazy"
+        >
+
+        <div class="project-content">
+
+            <h3>Modern Luxury Villa</h3>
+
+            <p>
+                A complete residential interior design project combining
+                modern architecture, elegant furniture, warm lighting and
+                premium finishes.
+            </p>
+
+            <a href="project-details.html" class="btn">
+                View Project Details
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- BLOG -->
+<section class="container">
+
+    <div class="section-heading">
+        <h2>Latest From Our Blog</h2>
+        <p>
+            Get useful ideas and inspiration for your next interior project.
+        </p>
+    </div>
+
     <div class="blog-card">
-        <h3>Top 5 Budget Decor Ideas for 2026</h3>
-        <p>Learn how to decorate your home beautifully without spending too much money. Simple tips for every room.</p>
-        <a href="blog-details.html" class="btn" style="margin-top:15px;">Read More</a>
-    </div>
-</div>
 
-<div class="container">
-    <h2>What Our Clients Say</h2>
-    <div class="cards">
-        <div class="testimonial" lang="ur">
-            <p>"ہوم ڈیکور اسٹوڈیو نے ہمارا Living Room بہت خوبصورت بنا دیا۔ بہت شکریہ!"</p>
+        <h3>5 Budget-Friendly Living Room Decor Ideas for 2026</h3>
+
+        <p>
+            Learn simple ways to make your living room beautiful and
+            comfortable without spending too much.
+        </p>
+
+        <a href="blog-details.html" class="btn">
+            Read Article
+        </a>
+
+    </div>
+
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="container">
+
+    <div class="section-heading">
+        <h2>What Our Clients Say</h2>
+        <p>
+            A few words from clients about their design experience.
+        </p>
+    </div>
+
+    <div class="testimonials">
+
+        <div class="testimonial" lang="ur" dir="rtl">
+
+            <p>
+                "ہوم ڈیکور اسٹوڈیو نے ہمارا Living Room بہت خوبصورت
+                بنا دیا۔ بہت شکریہ!"
+            </p>
+
             <b>- Ayesha, Lahore</b>
-        </div>
-        <div class="testimonial">
-            <p>"Best interior designers in Pakistan. Affordable and professional work."</p>
-            <b>- Ali, Karachi</b>
-        </div>
-    </div>
-</div>
 
-<footer>
-    <p>© 2026 Home Decor Studio. All Rights Reserved.</p>
+        </div>
+
+        <div class="testimonial">
+
+            <p>
+                "Best interior designers in Pakistan. Affordable,
+                creative and professional work."
+            </p>
+
+            <b>- Ali, Karachi</b>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA -->
+<section class="cta">
+
+    <h2>Ready to Transform Your Space?</h2>
+
     <p>
-    <a href="privacy-policy.html">Privacy Policy</a> |
-    <a href="terms-conditions.html">Terms & Conditions</a> |
-    <a href="cookie-policy.html">Cookie Policy</a> |
-    <a href="disclaimer.html">Disclaimer</a> |
-    <a href="faq.html">FAQ</a> |
-    <a href="contact-us.html">Contact</a>
-</p>
+        Start your interior design journey with Home Decor Studio today.
+    </p>
+
+    <a href="get-a-quote.html" class="btn">
+        Get a Quote
+    </a>
+
+    <a href="book-consultation.html" class="btn">
+        Book Consultation
+    </a>
+
+</section>
+
+<!-- WHATSAPP -->
+<a
+    href="https://wa.me/923001234567"
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener"
+    aria-label="Contact Home Decor Studio on WhatsApp"
+>💬</a>
+
+<!-- FOOTER -->
+<footer>
+
+    <p>© 2026 Home Decor Studio. All Rights Reserved.</p>
+
+    <p>
+        <a href="privacy-policy.html">Privacy Policy</a> |
+        <a href="terms-conditions.html">Terms & Conditions</a> |
+        <a href="cookie-policy.html">Cookie Policy</a> |
+        <a href="disclaimer.html">Disclaimer</a> |
+        <a href="faq.html">FAQ</a> |
+        <a href="contact-us.html">Contact</a>
+    </p>
+
 </footer>
 
 </body>

@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Services - Home Decor Studio</title>
+
+<meta name="description" content="Explore professional interior design services including commercial interior design, living room design and kitchen design by Home Decor Studio.">
+
+<meta property="og:title" content="Our Services - Home Decor Studio">
+<meta property="og:description" content="Professional interior design services for beautiful and functional spaces.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#fdf8f3;
+    color:#333;
+    line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+    background:#8B5A2B;
+    color:white;
+    padding:18px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+    white-space:nowrap;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:16px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#fbbf24;
+}
+
+/* HERO */
+
+.hero{
+    min-height:430px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:60px 20px;
+
+    background:
+    linear-gradient(
+        rgba(70,42,20,.65),
+        rgba(70,42,20,.65)
+    ),
+    url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=85")
+    center/cover;
+
+    color:white;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:18px;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:700px;
+    margin:auto;
+}
+
+/* INTRO */
+
+.intro{
+    text-align:center;
+    padding:70px 8% 30px;
+}
+
+.intro h2{
+    color:#8B5A2B;
+    font-size:34px;
+    margin-bottom:15px;
+}
+
+.intro p{
+    max-width:850px;
+    margin:auto;
+    color:#666;
+}
+
+/* SERVICES */
+
+.services{
+    padding:50px 7% 80px;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+    max-width:1250px;
+    margin:auto;
+}
+
+.service-card{
+    background:white;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 30px rgba(0,0,0,.15);
+}
+
+.service-card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    display:block;
+}
+
+.service-content{
+    padding:25px;
+}
+
+.service-content h3{
+    color:#8B5A2B;
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+.service-content p{
+    color:#666;
+    font-size:14px;
+}
+
+/* CTA */
+
+.cta{
+    text-align:center;
+    padding:70px 20px;
+    background:#f5e6d3;
+}
+
+.cta h2{
+    color:#8B5A2B;
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.cta p{
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+    background:#8B5A2B;
+    color:white;
+    text-decoration:none;
+    padding:13px 28px;
+    border-radius:7px;
+    transition:.3s;
+    margin:5px;
+    font-weight:600;
+}
+
+.btn:hover{
+    background:#fbbf24;
+    color:#333;
+}
+
+/* FOOTER */
+
+footer{
+    background:#2f241b;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+}
+
+footer p{
+    font-size:14px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    header{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    .service-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:600px){
+
+    .hero{
+        min-height:350px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr;
+    }
+
+    nav{
+        gap:10px;
+    }
+
+    nav a{
+        font-size:12px;
+    }
+
+    .intro h2{
+        font-size:28px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">
+Home Decor Studio
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="about-us.html">About</a>
+
+<a href="services.html">Services</a>
+
+<a href="portfolio.html">Portfolio</a>
+
+<a href="project-details.html">Projects</a>
+
+<a href="packages.html">Packages</a>
+
+<a href="blog.html">Blog</a>
+
+<a href="contact-us.html">Contact</a>
+
+<a href="get-a-quote.html">Get a Quote</a>
+
+<a href="book-consultation.html">Book Consultation</a>
+
+</nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>
+Our Interior Design Services
+</h1>
+
+<p>
+From professional commercial spaces to beautiful living rooms and
+functional kitchens, we create stylish interiors designed around your needs.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="intro">
+
+<h2>
+What We Offer
+</h2>
+
+<p>
+Home Decor Studio provides thoughtful interior design solutions with
+modern concepts, practical layouts, quality materials and elegant finishes.
+Our goal is to create spaces that are beautiful, comfortable and functional.
+</p>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services">
+
+<div class="service-grid">
+
+
+<!-- COMMERCIAL -->
+
+<div class="service-card">
+
+<img
+src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1000&q=85"
+alt="Modern commercial office interior"
+loading="lazy"
+>
+
+<div class="service-content">
+
+<h3>
+Commercial Interior Design
+</h3>
+
+<p>
+Professional interior solutions for offices, shops, restaurants and
+commercial spaces. We create practical and attractive environments
+that represent your brand and leave a strong impression.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- LIVING ROOM -->
+
+<div class="service-card">
+
+<img
+src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85"
+alt="Modern living room interior with sofa and furniture"
+loading="lazy"
+>
+
+<div class="service-content">
+
+<h3>
+Living Room Design
+</h3>
+
+<p>
+Transform your living room with elegant furniture, balanced layouts,
+beautiful lighting and carefully selected decorative elements for
+a comfortable and welcoming atmosphere.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- KITCHEN -->
+
+<div class="service-card">
+
+<img
+src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf?auto=format&fit=crop&w=1000&q=85"
+alt="Modern kitchen interior with cabinets and countertop"
+loading="lazy"
+>
+
+<div class="service-content">
+
+<h3>
+Kitchen Design
+</h3>
+
+<p>
+Create a functional and modern kitchen with smart storage,
+practical layouts, quality finishes and a design that makes everyday
+cooking and living more enjoyable.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<h2>
+Ready to Transform Your Space?
+</h2>
+
+<p>
+Tell us about your project and let our design team create something
+beautiful and functional for you.
+</p>
+
+<a href="get-a-quote.html" class="btn">
+Get a Quote
+</a>
+
+<a href="book-consultation.html" class="btn">
+Book Consultation
+</a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Home Decor Studio. All Rights Reserved.
+</p>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project Details - Modern Luxury Villa | Home Decor Studio</title>
+    <meta name="description" content="Explore the Modern Luxury Villa interior design project by Home Decor Studio, including design concept, gallery, materials, before and after transformation, and project details.">
+
+    <meta property="og:title" content="Modern Luxury Villa - Home Decor Studio">
+    <meta property="og:description" content="Explore our complete Modern Luxury Villa interior design case study.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background: #fffaf5;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #8B5A2B;
+            padding: 16px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            color: white;
+            font-size: 22px;
+            font-weight: 700;
+            text-decoration: none;
+            margin-right: auto;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #fbbf24;
+        }
+
+        .hero {
+            min-height: 430px;
+            background:
+                linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.48)),
+                url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=85")
+                center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 50px 20px;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            font-size: 19px;
+        }
+
+        .breadcrumb {
+            max-width: 1100px;
+            margin: 25px auto 0;
+            padding: 0 20px;
+            font-size: 14px;
+        }
+
+        .breadcrumb a {
+            color: #8B5A2B;
+            text-decoration: none;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 65px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .section-title h2 {
+            color: #8B5A2B;
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+        .overview {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .overview img {
+            width: 100%;
+            height: 390px;
+            object-fit: cover;
+            border-radius: 14px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .overview h2 {
+            color: #8B5A2B;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .overview p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .project-info {
+            background: #f5e6d3;
+            border-radius: 14px;
+            padding: 25px;
+            margin-top: 25px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .info-box strong {
+            color: #8B5A2B;
+            display: block;
+        }
+
+        .concept {
+            background: white;
+            border-radius: 15px;
+            padding: 35px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+        }
+
+        .concept h3 {
+            color: #8B5A2B;
+            margin-bottom: 12px;
+        }
+
+        .concept p {
+            color: #555;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.03);
+        }
+
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .ba-card {
+            background: white;
+            padding: 15px;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .ba-card h3 {
+            text-align: center;
+            color: #8B5A2B;
+            margin-bottom: 12px;
+        }
+
+        .ba-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .ba-images div {
+            position: relative;
+        }
+
+        .ba-images img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .label {
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+            background: rgba(0,0,0,0.72);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+        .materials {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .material-card {
+            background: white;
+            padding: 25px 18px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+        }
+
+        .material-card h3 {
+            color: #8B5A2B;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .material-card p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .quote {
+            background: #f5e6d3;
+            border-left: 5px solid #8B5A2B;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .quote p {
+            font-size: 18px;
+            font-style: italic;
+            color: #555;
+        }
+
+        .quote strong {
+            display: block;
+            margin-top: 12px;
+            color: #8B5A2B;
+        }
+
+        .related {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .related-card {
+            background: white;
+            border-radius: 13px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+        }
+
+        .related-card img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+        }
+
+        .related-content {
+            padding: 20px;
+        }
+
+        .related-content h3 {
+            color: #8B5A2B;
+            margin-bottom: 6px;
+        }
+
+        .related-content p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .cta {
+            background: #8B5A2B;
+            color: white;
+            text-align: center;
+            border-radius: 15px;
+            padding: 50px 25px;
+        }
+
+        .cta h2 {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .cta p {
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #fbbf24;
+            color: #333;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 7px;
+            font-weight: 600;
+            margin: 5px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+        }
+
+        footer {
+            background: #3f2b1f;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        @media (max-width: 900px) {
+            nav {
+                gap: 12px;
+            }
+
+            .logo {
+                width: 100%;
+                text-align: center;
+                margin: 0 0 5px;
+            }
+
+            .overview {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .materials {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .related {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                min-height: 350px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section-title h2,
+            .overview h2,
+            .cta h2 {
+                font-size: 26px;
+            }
+
+            .project-info {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .before-after {
+                grid-template-columns: 1fr;
+            }
+
+            .ba-images {
+                grid-template-columns: 1fr;
+            }
+
+            .materials {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            section {
+                padding: 45px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <a href="index.html" class="logo">Home Decor Studio</a>
+        <a href="index.html">Home</a>
+        <a href="about-us.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="project-details.html">Projects</a>
+        <a href="packages.html">Packages</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact-us.html">Contact</a>
+        <a href="get-a-quote.html">Get a Quote</a>
+        <a href="book-consultation.html">Book Consultation</a>
+    </nav>
+</header>
+
+<div class="breadcrumb">
+    <a href="index.html">Home</a> /
+    <a href="portfolio.html">Portfolio</a> /
+    Project Details
+</div>
+
+<section class="hero">
+    <div>
+        <h1>Modern Luxury Villa</h1>
+        <p>Complete Interior Design Case Study</p>
+    </div>
+</section>
+
+<section>
+    <div class="overview">
+
+        <img
+            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85"
+            alt="Modern luxury villa interior"
+            loading="lazy"
+        >
+
+        <div>
+            <h2>Project Overview</h2>
+
+            <p>
+                This Modern Luxury Villa project combines elegant architecture,
+                premium materials and functional interior planning to create a
+                sophisticated and comfortable family home.
+            </p>
+
+            <p>
+                Our design team focused on creating a balanced environment where
+                luxury, natural light, modern furniture and practical living
+                spaces work together.
+            </p>
+
+            <div class="project-info">
+                <div class="info-box">
+                    <strong>Location</strong>
+                    Islamabad, Pakistan
+                </div>
+
+                <div class="info-box">
+                    <strong>Project Type</strong>
+                    Residential
+                </div>
+
+                <div class="info-box">
+                    <strong>Area</strong>
+                    3,500 sq. ft.
+                </div>
+
+                <div class="info-box">
+                    <strong>Design Style</strong>
+                    Modern Luxury
+                </div>
+
+                <div class="info-box">
+                    <strong>Status</strong>
+                    Completed
+                </div>
+
+                <div class="info-box">
+                    <strong>Timeline</strong>
+                    4 Months
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <div class="section-title">
+        <h2>Design Concept</h2>
+        <p>The idea behind the transformation</p>
+    </div>
+
+    <div class="concept">
+        <h3>Elegant, Functional & Timeless</h3>
+
+        <p>
+            The design concept was developed around clean architectural lines,
+            neutral tones, warm wooden elements and carefully selected lighting.
+            Large furniture pieces were positioned to maintain an open feeling
+            while decorative elements added personality to every space.
+        </p>
+
+        <br>
+
+        <p>
+            The result is a sophisticated interior that feels luxurious without
+            becoming excessive. Every material and furniture piece was selected
+            to support both visual appeal and everyday functionality.
+        </p>
+    </div>
+</section>
+
+<section>
+    <div class="section-title">
+        <h2>Project Gallery</h2>
+        <p>A visual look at the completed interior</p>
+    </div>
+
+    <div class="gallery">
+
+        <img
+            src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85"
+            alt="Modern luxury living room"
+            loading="lazy"
+        >
+
+        <img
+            src="https://images.unsplash.com/photo-1617325710236-4a36d2a1b0d3?auto=format&fit=crop&w=1000&q=85"
+            alt="Elegant bedroom interior"
+            loading="lazy"
+        >
+
+        <img
+            src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf?auto=format&fit=crop&w=1000&q=85"
+            alt="Modern kitchen interior"
+            loading="lazy"
+        >
+
+        <img
+            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85"
+            alt="Modern office interior"
+            loading="lazy"
+        >
+
+        <img
+            src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1000&q=85"
+            alt="Luxury interior decoration"
+            loading="lazy"
+        >
+
+        <img
+            src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85"
+            alt="Contemporary home interior"
+            loading="lazy"
+        >
+
+    </div>
+</section>
+
+<section>
+    <div class="section-title">
+        <h2>Before & After Transformation</h2>
+        <p>From an ordinary space to a refined luxury interior</p>
+    </div>
+
+    <div class="before-after">
+
+        <div class="ba-card">
+            <h3>Living Room</h3>
+
+            <div class="ba-images">
+                <div>
+                    <img
+                        src="https://images.unsplash.com/photo-1564078516393-cf04bd966897?auto=format&fit=crop&w=800&q=85"
+                        alt="Living room before transformation"
+                        loading="lazy"
+                    >
+                    <span class="label">BEFORE</span>
+                </div>
+
+                <div>
+                    <img
+                        src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=85"
+                        alt="Living room after transformation"
+                        loading="lazy"
+                    >
+                    <span class="label">AFTER</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="ba-card">
+            <h3>Luxury Interior</h3>
+
+            <div class="ba-images">
+                <div>
+                    <img
+                        src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=85"
+                        alt="Interior before transformation"
+                        loading="lazy"
+                    >
+                    <span class="label">BEFORE</span>
+                </div>
+
+                <div>
+                    <img
+                        src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=85"
+                        alt="Interior after transformation"
+                        loading="lazy"
+                    >
+                    <span class="label">AFTER</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <div class="section-title">
+        <h2>Materials & Finishes</h2>
+        <p>Carefully selected materials for a premium result</p>
+    </div>
+
+    <div class="materials">
+
+        <div class="material-card">
+            <h3>Flooring</h3>
+            <p>Premium marble and warm wooden flooring.</p>
+        </div>
+
+        <div class="material-card">
+            <h3>Furniture</h3>
+            <p>Custom contemporary furniture with elegant finishes.</p>
+        </div>
+
+        <div class="material-card">
+            <h3>Lighting</h3>
+            <p>Decorative and ambient lighting for a warm atmosphere.</p>
+        </div>
+
+        <div class="material-card">
+            <h3>Walls</h3>
+            <p>Textured finishes and premium wallpapers.</p>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <div class="section-title">
+        <h2>Client Experience</h2>
+        <p>What our client valued most</p>
+    </div>
+
+    <div class="quote">
+        <p>
+            "Home Decor Studio transformed our villa into a beautiful,
+            comfortable and modern home. The team understood our requirements
+            and delivered a design that exceeded our expectations."
+        </p>
+
+        <strong>— Modern Luxury Villa Client</strong>
+    </div>
+</section>
+
+<section>
+    <div class="section-title">
+        <h2>Related Projects</h2>
+        <p>Explore more interior design work</p>
+    </div>
+
+    <div class="related">
+
+        <div class="related-card">
+            <img
+                src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=900&q=85"
+                alt="Contemporary living room project"
+                loading="lazy"
+            >
+
+            <div class="related-content">
+                <h3>Contemporary Living Room</h3>
+                <p>Lahore · Residential · Contemporary</p>
+            </div>
+        </div>
+
+        <div class="related-card">
+            <img
+                src="https://images.unsplash.com/photo-1556912173-46c336c7fd55?auto=format&fit=crop&w=900&q=85"
+                alt="Premium kitchen project"
+                loading="lazy"
+            >
+
+            <div class="related-content">
+                <h3>Premium Kitchen</h3>
+                <p>Lahore · Kitchen · Luxury</p>
+            </div>
+        </div>
+
+        <div class="related-card">
+            <img
+                src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=85"
+                alt="Minimalist bedroom project"
+                loading="lazy"
+            >
+
+            <div class="related-content">
+                <h3>Minimalist Bedroom</h3>
+                <p>Karachi · Bedroom · Minimalist</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <div class="cta">
+        <h2>Ready to Transform Your Space?</h2>
+
+        <p>
+            Let our interior design team create a personalized concept
+            for your home or commercial space.
+        </p>
+
+        <a href="book-consultation.html" class="btn">
+            Book Consultation
+        </a>
+
+        <a href="get-a-quote.html" class="btn">
+            Get a Quote
+        </a>
+
+        <a href="cost-calculator.html" class="btn">
+            Calculate Cost
+        </a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Home Decor Studio. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

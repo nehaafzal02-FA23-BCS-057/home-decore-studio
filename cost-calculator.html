@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cost Calculator - Home Decor Studio</title>
+
+<meta name="description" content="Estimate your interior design investment with the Home Decor Studio cost calculator.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Poppins,Arial,sans-serif;
+    background:#fffaf5;
+    color:#3e2b1f;
+    line-height:1.6;
+}
+
+header{
+    background:#8b5a2b;
+    padding:18px 5%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 15px #00000025;
+}
+
+.navbar{
+    max-width:1250px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:white;
+    font-size:23px;
+    font-weight:700;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:17px;
+    font-size:13px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover,
+nav a.active{
+    color:#fbbf24;
+}
+
+/* HERO */
+
+.hero{
+    background:linear-gradient(135deg,#8b5a2b,#b77b45);
+    color:white;
+    text-align:center;
+    padding:70px 20px;
+}
+
+.hero h1{
+    font-size:44px;
+    margin-bottom:12px;
+}
+
+.hero p{
+    max-width:720px;
+    margin:auto;
+    font-size:16px;
+}
+
+/* CALCULATOR */
+
+.calculator-section{
+    width:90%;
+    max-width:1100px;
+    margin:60px auto;
+}
+
+.calculator{
+    background:white;
+    border-radius:18px;
+    padding:35px;
+    box-shadow:0 8px 30px #00000012;
+}
+
+.calculator h2{
+    color:#8b5a2b;
+    text-align:center;
+    margin-bottom:10px;
+    font-size:30px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#777;
+    margin-bottom:35px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group.full{
+    grid-column:1/-1;
+}
+
+label{
+    font-weight:600;
+    margin-bottom:7px;
+    color:#5c3b22;
+    font-size:14px;
+}
+
+input,
+select{
+    width:100%;
+    padding:13px 14px;
+    border:1px solid #ddd0c4;
+    border-radius:8px;
+    font-family:inherit;
+    font-size:14px;
+    background:#fff;
+    outline:none;
+}
+
+input:focus,
+select:focus{
+    border-color:#8b5a2b;
+    box-shadow:0 0 0 3px #8b5a2b15;
+}
+
+.calculate-btn{
+    width:100%;
+    border:none;
+    background:#8b5a2b;
+    color:white;
+    padding:14px;
+    border-radius:8px;
+    font-family:inherit;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    margin-top:25px;
+    transition:0.3s;
+}
+
+.calculate-btn:hover{
+    background:#6f451f;
+}
+
+/* RESULT */
+
+.result{
+    display:none;
+    margin-top:30px;
+    padding:28px;
+    background:#f5e6d3;
+    border-radius:14px;
+    text-align:center;
+}
+
+.result h3{
+    color:#5c3b22;
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+.price{
+    color:#8b5a2b;
+    font-size:30px;
+    font-weight:700;
+    margin:10px 0;
+}
+
+.result p{
+    color:#66554a;
+    font-size:14px;
+}
+
+.note{
+    margin-top:15px;
+    font-size:12px;
+    color:#777;
+}
+
+/* CTA */
+
+.cta{
+    margin-top:35px;
+    text-align:center;
+}
+
+.btn{
+    display:inline-block;
+    background:#8b5a2b;
+    color:white;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:8px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#fbbf24;
+    color:#3e2b1f;
+}
+
+/* FOOTER */
+
+footer{
+    margin-top:60px;
+    background:#3e2b1f;
+    color:white;
+    text-align:center;
+    padding:28px 20px;
+}
+
+footer p{
+    font-size:14px;
+    opacity:0.85;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1050px){
+
+    nav a{
+        margin-left:12px;
+        font-size:12px;
+    }
+}
+
+@media(max-width:800px){
+
+    nav{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form-group.full{
+        grid-column:auto;
+    }
+}
+
+@media(max-width:520px){
+
+    .hero{
+        padding:55px 18px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .calculator-section{
+        width:92%;
+        margin:40px auto;
+    }
+
+    .calculator{
+        padding:22px;
+    }
+
+    .calculator h2{
+        font-size:25px;
+    }
+
+    .price{
+        font-size:25px;
+    }
+
+    .btn{
+        width:100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="navbar">
+
+<a href="index.html" class="logo">
+Home Decor Studio
+</a>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="about-us.html">About</a>
+<a href="services.html">Services</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="project-details.html">Projects</a>
+<a href="packages.html">Packages</a>
+<a href="blog.html">Blog</a>
+<a href="contact-us.html">Contact</a>
+<a href="get-a-quote.html">Get a Quote</a>
+<a href="book-consultation.html">Book Consultation</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>Interior Cost Calculator</h1>
+
+<p>
+Get a quick estimated investment range for your interior design project based on your space and selected design level.
+</p>
+
+</section>
+
+
+<!-- CALCULATOR -->
+
+<section class="calculator-section">
+
+<div class="calculator">
+
+<h2>Calculate Your Estimated Cost</h2>
+
+<p class="subtitle">
+Enter your project details below to receive an approximate investment range.
+</p>
+
+
+<div class="form-grid">
+
+
+<div class="form-group">
+
+<label for="propertyType">
+Property Type
+</label>
+
+<select id="propertyType">
+
+<option value="">Select Property Type</option>
+<option value="apartment">Apartment</option>
+<option value="house">House</option>
+<option value="villa">Villa</option>
+<option value="office">Office</option>
+<option value="restaurant">Restaurant / Cafe</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="designLevel">
+Design Level
+</label>
+
+<select id="designLevel">
+
+<option value="">Select Design Level</option>
+<option value="basic">Basic</option>
+<option value="premium">Premium</option>
+<option value="luxury">Luxury</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="area">
+Approximate Area (sq ft)
+</label>
+
+<input
+type="number"
+id="area"
+placeholder="Example: 1500"
+min="100"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="rooms">
+Number of Rooms
+</label>
+
+<input
+type="number"
+id="rooms"
+placeholder="Example: 4"
+min="1"
+>
+
+</div>
+
+
+<div class="form-group full">
+
+<label for="requirements">
+Main Requirement
+</label>
+
+<select id="requirements">
+
+<option value="full">Full Interior Design</option>
+<option value="living">Living Room</option>
+<option value="bedroom">Bedroom</option>
+<option value="kitchen">Kitchen</option>
+<option value="commercial">Commercial Interior</option>
+
+</select>
+
+</div>
+
+
+</div>
+
+
+<button class="calculate-btn" onclick="calculateCost()">
+Calculate Estimated Investment
+</button>
+
+
+<!-- RESULT -->
+
+<div class="result" id="result">
+
+<h3>Your Estimated Investment</h3>
+
+<div class="price" id="price">
+PKR 0 - PKR 0
+</div>
+
+<p>
+This is an approximate estimate based on the information provided.
+</p>
+
+<p class="note">
+Final pricing may vary depending on materials, furniture, finishes,
+site conditions and project requirements.
+</p>
+
+<div class="cta">
+
+<a href="get-a-quote.html" class="btn">
+Get a Detailed Quote
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Home Decor Studio. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<script>
+
+function calculateCost(){
+
+    const area = Number(document.getElementById("area").value);
+    const designLevel = document.getElementById("designLevel").value;
+    const propertyType = document.getElementById("propertyType").value;
+
+    if(!area || area < 100){
+
+        alert("Please enter an area of at least 100 sq ft.");
+
+        return;
+    }
+
+    if(!designLevel){
+
+        alert("Please select a design level.");
+
+        return;
+    }
+
+    if(!propertyType){
+
+        alert("Please select a property type.");
+
+        return;
+    }
+
+
+    let minRate = 0;
+    let maxRate = 0;
+
+
+    if(designLevel === "basic"){
+
+        minRate = 1800;
+        maxRate = 2800;
+
+    }
+
+    else if(designLevel === "premium"){
+
+        minRate = 2800;
+        maxRate = 4200;
+
+    }
+
+    else if(designLevel === "luxury"){
+
+        minRate = 4200;
+        maxRate = 6500;
+
+    }
+
+
+    const minimum = area * minRate;
+    const maximum = area * maxRate;
+
+
+    const formattedMinimum = minimum.toLocaleString("en-PK");
+    const formattedMaximum = maximum.toLocaleString("en-PK");
+
+
+    document.getElementById("price").textContent =
+        "PKR " + formattedMinimum + " - PKR " + formattedMaximum;
+
+
+    document.getElementById("result").style.display = "block";
+
+
+    document.getElementById("result").scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+    });
+
+}
+
+</script>
+
+</body>
+</html>

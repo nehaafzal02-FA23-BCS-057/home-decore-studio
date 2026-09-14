@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Design Packages - Home Decor Studio</title>
+
+<meta name="description" content="Choose the right interior design package for your home or commercial project, from basic consultation to premium and turnkey interior design.">
+
+<meta property="og:title" content="Design Packages - Home Decor Studio">
+<meta property="og:description" content="Explore flexible interior design packages for residential and commercial projects.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#faf7f2;
+    color:#333;
+    line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+    background:#8b5a2b;
+    color:white;
+    padding:18px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 12px rgba(0,0,0,0.15);
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+    white-space:nowrap;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    gap:16px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#fbbf24;
+}
+
+/* HERO */
+
+.hero{
+    text-align:center;
+    padding:70px 20px;
+    background:#f1e4d3;
+}
+
+.hero h1{
+    font-size:46px;
+    color:#6f4523;
+    margin-bottom:14px;
+}
+
+.hero p{
+    max-width:750px;
+    margin:auto;
+    font-size:17px;
+    color:#555;
+}
+
+/* PACKAGES */
+
+.container{
+    width:88%;
+    max-width:1200px;
+    margin:55px auto;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+}
+
+.package{
+    background:white;
+    padding:35px 27px;
+    border-radius:18px;
+    box-shadow:0 5px 20px #0001;
+    text-align:center;
+    transition:.3s;
+    position:relative;
+}
+
+.package:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 30px #0002;
+}
+
+.package.featured{
+    border:3px solid #8b5a2b;
+    transform:scale(1.03);
+}
+
+.package.featured:hover{
+    transform:scale(1.03) translateY(-8px);
+}
+
+.badge{
+    position:absolute;
+    top:-15px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#8b5a2b;
+    color:white;
+    padding:6px 18px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+    white-space:nowrap;
+}
+
+.package h2{
+    color:#8b5a2b;
+    font-size:28px;
+    margin-bottom:12px;
+}
+
+.package > p{
+    min-height:55px;
+    color:#666;
+    font-size:14px;
+}
+
+.price{
+    font-size:24px;
+    font-weight:700;
+    margin:20px 0;
+    color:#6f4523;
+}
+
+.package ul{
+    list-style:none;
+    text-align:left;
+    margin:20px 0;
+}
+
+.package li{
+    padding:10px 0;
+    border-bottom:1px solid #eee;
+    font-size:14px;
+}
+
+.package li::before{
+    content:"✓ ";
+    color:#8b5a2b;
+    font-weight:bold;
+}
+
+.package a{
+    display:inline-block;
+    background:#8b5a2b;
+    color:white;
+    padding:11px 22px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+    margin-top:12px;
+    transition:.3s;
+}
+
+.package a:hover{
+    background:#fbbf24;
+    color:#333;
+}
+
+/* CUSTOM PACKAGE */
+
+.info{
+    margin-top:55px;
+    background:white;
+    padding:32px;
+    border-radius:16px;
+    box-shadow:0 4px 15px #0001;
+}
+
+.info h2{
+    color:#8b5a2b;
+    margin-bottom:12px;
+}
+
+.info p{
+    color:#666;
+}
+
+/* CTA */
+
+.cta{
+    background:#8b5a2b;
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.cta h2{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.cta p{
+    margin-bottom:18px;
+}
+
+.cta a{
+    display:inline-block;
+    background:white;
+    color:#8b5a2b;
+    padding:12px 25px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.cta a:hover{
+    background:#fbbf24;
+    color:#333;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    background:#2f241b;
+    color:white;
+    padding:25px;
+}
+
+footer p{
+    font-size:14px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+    header{
+        flex-direction:column;
+        gap:14px;
+    }
+
+    .logo{
+        margin-bottom:3px;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .package.featured,
+    .package.featured:hover{
+        transform:none;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    nav{
+        gap:9px;
+    }
+
+    nav a{
+        font-size:11px;
+    }
+
+    .container{
+        width:92%;
+    }
+
+    .package{
+        padding:30px 22px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Home Decor Studio</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="about-us.html">About</a>
+<a href="services.html">Services</a>
+<a href="portfolio.html">Portfolio</a>
+
+<!-- CORRECT PROJECT FILE -->
+<a href="project-details.html">Projects</a>
+
+<a href="packages.html">Packages</a>
+<a href="blog.html">Blog</a>
+<a href="contact-us.html">Contact</a>
+<a href="get-a-quote.html">Get a Quote</a>
+<a href="book-consultation.html">Book Consultation</a>
+
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<h1>Our Design Packages</h1>
+
+<p>
+Flexible interior design packages created for different project needs.
+Choose the package that best fits your space and requirements.
+</p>
+
+</section>
+
+
+<section class="container">
+
+<div class="grid">
+
+
+<!-- BASIC -->
+
+<div class="package">
+
+<h2>Basic</h2>
+
+<p>
+Perfect for initial design guidance and consultation.
+</p>
+
+<div class="price">
+Custom Quote
+</div>
+
+<ul>
+
+<li>Initial Design Consultation</li>
+<li>Space Planning Guidance</li>
+<li>Color & Style Suggestions</li>
+<li>Basic Material Recommendations</li>
+<li>One Design Concept</li>
+
+</ul>
+
+<a href="get-a-quote.html">
+Request Quote
+</a>
+
+</div>
+
+
+<!-- PREMIUM -->
+
+<div class="package featured">
+
+<div class="badge">
+MOST POPULAR
+</div>
+
+<h2>Premium</h2>
+
+<p>
+Complete design planning for clients who want a polished interior.
+</p>
+
+<div class="price">
+Custom Quote
+</div>
+
+<ul>
+
+<li>Everything in Basic</li>
+<li>Detailed Space Planning</li>
+<li>Furniture Selection</li>
+<li>Lighting Planning</li>
+<li>Material & Finish Selection</li>
+<li>3D Visualization</li>
+<li>Multiple Design Concepts</li>
+
+</ul>
+
+<a href="get-a-quote.html">
+Get Started
+</a>
+
+</div>
+
+
+<!-- TURNKEY -->
+
+<div class="package">
+
+<h2>Turnkey</h2>
+
+<p>
+End-to-end interior solution from concept to final handover.
+</p>
+
+<div class="price">
+Custom Quote
+</div>
+
+<ul>
+
+<li>Everything in Premium</li>
+<li>Complete Project Planning</li>
+<li>Procurement Assistance</li>
+<li>Execution Management</li>
+<li>Site Coordination</li>
+<li>Quality Monitoring</li>
+<li>Final Project Handover</li>
+
+</ul>
+
+<a href="book-consultation.html">
+Book Consultation
+</a>
+
+</div>
+
+
+</div>
+
+
+<!-- CUSTOM PACKAGE -->
+
+<div class="info">
+
+<h2>Need a Customized Package?</h2>
+
+<p>
+Every interior project is different. The final investment depends on
+property type, area, number of rooms, design level, materials and
+project requirements.
+</p>
+
+<br>
+
+<p>
+Contact our team to discuss your project and receive a customized
+recommendation based on your specific needs.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="cta">
+
+<h2>Let's Design Your Dream Space</h2>
+
+<p>
+Start with a free consultation and discuss your interior requirements.
+</p>
+
+<a href="book-consultation.html">
+Book Free Consultation
+</a>
+
+</section>
+
+
+<footer>
+
+<p>
+© 2026 Home Decor Studio. All Rights Reserved.
+</p>
+
+</footer>
+
+</body>
+</html>
