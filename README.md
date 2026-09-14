@@ -1,33 +1,89 @@
 # Home Decor Studio
 
-Home Decor Studio is a responsive website designed to provide creative home decoration and interior design ideas. The website includes different categories, blog content, DIY tips, gallery sections, and contact information.
+Home Decor Studio is a responsive and modern interior design website created to provide users with professional home decoration ideas, interior design services, project inspiration, packages, consultation, and cost estimation.
+
+The website is designed for users looking for residential and commercial interior design solutions in Pakistan.
 
 ## Features
 
 - Responsive and mobile-friendly design
-- Home decor categories
-- Blog section
-- Gallery
-- DIY decoration tips
-- Contact page
+- Modern and user-friendly interface
+- Home and interior design services
+- Portfolio and project showcase
+- Project details and case study
+- Interior design packages
+- Get a Quote form
+- Book Consultation form
+- Interior Cost Calculator
+- Design Styles section
+- Inspiration Gallery
+- Before & After transformations
+- Blog and Blog Details pages
+- Categories section
 - About Us page
-- Clean and user-friendly interface
-- SEO-friendly structure
+- Contact Us page
+- FAQ section
+- Privacy Policy
+- Terms & Conditions
+- Cookie Policy
+- Disclaimer
+- SEO-friendly page structure
+- Lazy-loaded images
+- Internal page linking
+- Responsive navigation and footer
 
 ## Technologies Used
 
 - HTML5
 - CSS3
 - JavaScript
+- Google Fonts
+- Responsive Web Design
+
+## Website Pages
+
+The project includes multiple pages such as:
+
+- Home
+- About Us
+- Services
+- Portfolio
+- Project Details
+- Packages
+- Blog
+- Blog Details
+- Categories
+- Design Styles
+- Inspiration Gallery
+- Before & After
+- Cost Calculator
+- Get a Quote
+- Book Consultation
+- Contact Us
+- FAQ
+- Privacy Policy
+- Terms & Conditions
+- Cookie Policy
+- Disclaimer
 
 ## Project Purpose
 
-The purpose of this project is to create a user-friendly home decor website that provides visitors with inspiration, decoration ideas, and useful interior design information.
+The purpose of this project is to create a professional interior design website that helps users explore design ideas, view completed projects, understand available services and packages, estimate interior design costs, and request consultations or customized quotes.
 
 ## Live Website
 
+### Vercel
+https://home-decore-studio.vercel.app/
+
+### GitHub Pages
 https://nehaafzal02-fa23-BCS-057.github.io/home-decore-studio/
-This is my GitHub collaboration practice
-This line was added on GitHub to test git pull command
-Updated from VS Code on 19 Aug 2026
-This line was added on GitHub to test git pull 
+
+## Repository
+
+https://github.com/nehaafzal02-FA23-BCS-057/home-decore-studio
+
+## Developer
+
+**Neha Afzal**
+
+Home Decor Studio — Web Development Internship Project
